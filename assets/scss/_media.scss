@@ -1,0 +1,509 @@
+/* ------------------------------------------ Media Queries ----------------------------------- */
+
+@media screen and (min-width: 761px) and (max-width: $descope-width + 20px) {
+	/* Tablets styles */
+	.hidden-mobile {
+		display: block !important;
+	}
+
+	.vissible-mobile {
+		display: none !important;
+	}
+	.animated {
+		/*CSS transitions*/
+		-o-transition-property: none !important;
+		-moz-transition-property: none !important;
+		-ms-transition-property: none !important;
+		-webkit-transition-property: none !important;
+		transition-property: none !important;
+		/*CSS transforms*/
+		-o-transform: none !important;
+		-moz-transform: none !important;
+		-ms-transform: none !important;
+		-webkit-transform: none !important;
+		transform: none !important;
+		/*CSS animations*/
+		-webkit-animation: none !important;
+		-moz-animation: none !important;
+		-o-animation: none !important;
+		-ms-animation: none !important;
+		animation: none !important;
+	}
+
+	img {
+		max-width: 100%;
+	}
+
+	.solution .rect {
+		display: none;
+	}
+
+	.solution {
+		.hidden-mobile {
+			display: none !important;
+		}
+		.vissible-mobile {
+			display: inline-block !important;
+		}
+	}
+
+	.cause {
+		.grid_4 {
+			width: 50%;
+		}
+		.middle-image {
+			display: none;
+		}
+	}
+
+	.shop {
+		padding: 40px 0;
+	}
+
+	.shop .shop-item,
+	.shop .bottom-price .shop-item {
+		height: 390px;
+	}
+
+	.take-offer .btn {
+		@include rem('font-size', 16px);
+	}
+
+	.parthers h2 {
+		margin-top: 0;
+		@include rem('font-size', 44px);
+	}
+
+	.solution {
+		h3 {
+			.vissible-mobile {
+				display: none !important;
+			}
+		}
+	}
+
+	.choose-step .bottom-item {
+		padding-top: 20px;
+	}
+
+	.choose-step .example {
+		display: none;
+	}
+
+	.how-we-work .container_12:before,
+	.how-we-work .container_12:after {
+		content: none;
+	}
+
+	.garanty {
+		background-size: cover;
+		background-position: 45%;
+	}
+
+	.free-form {
+		h2 {
+			@include rem('font-size', 36px);
+			line-height: 38px;
+		}
+	}
+
+	.footer {
+
+	}
+
+}
+
+/* --------------------------------------- */
+
+@media screen and (max-width: 760px) {
+	/* Mobile styles */
+	br {
+		display: none;
+	}
+	/* Vissible block */
+	.hidden-mobile {
+		display: none !important;
+	}
+
+	.vissible-mobile {
+		display: block !important;
+	}
+
+	/* Image sizes */
+
+	img {
+		max-width: 100%;
+	}
+
+	.animated {
+		/*CSS transitions*/
+		-o-transition-property: none !important;
+		-moz-transition-property: none !important;
+		-ms-transition-property: none !important;
+		-webkit-transition-property: none !important;
+		transition-property: none !important;
+		/*CSS transforms*/
+		-o-transform: none !important;
+		-moz-transform: none !important;
+		-ms-transform: none !important;
+		-webkit-transform: none !important;
+		transform: none !important;
+		/*CSS animations*/
+		-webkit-animation: none !important;
+		-moz-animation: none !important;
+		-o-animation: none !important;
+		-ms-animation: none !important;
+		animation: none !important;
+	}
+
+	h2 {
+		@include rem('font-size', 30px);
+		text-align: center;
+		line-height: 32px;
+	}
+
+	.offer {
+		padding: 40px 0;
+		background-size: cover;
+		.title-desk {
+			padding-left: 0;
+			padding-bottom: 40px;
+		}
+	}
+
+	.problem {
+		padding: 40px 0;
+		.title-desk {
+			margin-bottom: 20px;
+		}
+		img {
+			margin-bottom: 10px;
+		}
+		p {
+			margin-bottom: 10px;
+		}
+	}
+
+	.solution .rect {
+		display: none;
+	}
+
+	.solution {
+		padding: 40px 0;
+		h3 {
+			@include rem('font-size', 24px);
+		}
+		.vissible-mobile {
+			display: inline !important;
+		}
+	}
+
+	.offer .field {
+		width: 260px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	.offer .btn {
+		width: 260px;
+		margin-left: auto;
+		margin-right: auto;
+		@include rem('font-size', 16px);
+	}
+
+	.cause {
+		padding: 40px 0;
+		.title-desk {
+			@include rem('font-size', 20px);
+			line-height: 22px;
+			margin-bottom: 30px;
+		}
+		img {
+			margin-bottom: 20px;
+		}
+	}
+
+	.shop {
+		padding: 40px 0;
+		.shop-item {
+			height: auto;
+			padding-top: 20px;
+			padding-bottom: 20px;
+			border-bottom: 3px solid #dadee4;
+		}
+		.clear {
+			display: none;
+		}
+	}
+
+	.shop .bottom-price .shop-item {
+		height: auto;
+	}
+
+	.shop .shop-item .btn {
+		width: 240px;
+		position: static;
+		margin-top: 10px;
+		margin-left: auto;
+		margin-right: auto;
+		transform: none;
+	}
+
+	.parthers {
+		padding: 40px 0;
+		.first-item,
+		.bottom-logo .logo-item {
+			border-bottom: 1px solid #ebebeb;
+		}
+	}
+
+	.parthers .last-item {
+		padding-right: 0;
+	}
+
+	.parthers .bottom-logo .last-item .logo-item {
+		position: relative;
+		padding-top: 0;
+		img {
+			position: absolute;
+			margin: auto;
+			top: 0;
+			bottom: 0;
+			left: 0;
+			right: 0;
+		}
+	}
+
+	.parthers h2 {
+		@include rem('font-size', 22px);
+		line-height: 22px;
+		margin-top: 0;
+		margin-bottom: 20px;
+	}
+
+	.parthers .first-item {
+		padding-left: 0;
+	}
+
+	.parthers .grid_2 {
+		margin-bottom: 10px;
+	}
+
+	.choose-step {
+		padding: 40px 0;
+	}
+
+	.choose-step .number {
+		padding-right: 0;
+		text-align: center;
+	}
+
+	.choose-step h4 {
+		text-align: center;
+	}
+
+	.choose-step .bottom-item {
+		padding-top: 40px;
+	}
+
+	.choose-step .third-item img {
+		display: none;
+	}
+
+	.how-we-work {
+		padding: 40px 0;
+	}
+
+	.bottom-middle {
+		img {
+			display: block;
+			margin-left: auto;
+			margin-right: auto;
+		}
+	}
+
+	.middle-image {
+		text-align: center;
+		img {
+			margin-left: auto;
+			margin-right: auto;
+		}
+	}
+
+	.how-we-work .container_12:after {
+		content: none;
+	}
+
+	.solution {
+		h3 {
+			.hidden-mobile {
+				display: none !important;
+			}
+		}
+	}
+
+	.how-we-work h4 {
+		text-align: center;
+	}
+
+	.how-we-work .step2:before {
+		content: none;
+	}
+
+	.how-we-work h4:before {
+		left: 50%;
+		margin-left: -5px;
+	}
+
+	.choose-step h2 {
+		margin-bottom: 20px;
+	}
+
+	.choose-step .number {
+		@include rem('font-size', 60px);
+		line-height: 60px;
+		padding-bottom: 0;
+	}
+
+	.choose-step {
+		h4 {
+			margin-bottom: 5px;
+			@include rem('font-size', 18px);
+		}
+	}
+
+	.choose-step p,
+	.choose-step li {
+		@include rem('font-size', 14px);
+	}
+
+	.choose-step li:before {
+		top: 10px;
+	}
+
+	.garanty {
+		background-size: cover;
+		padding: 40px 0;
+	}
+
+	.garanty .disclaymer {
+		text-align: center;
+	}
+
+	/* ---------------------------- Custom styles --------------------------------------*/
+
+	/* Footer */
+
+	.footer {
+		.logo {
+			display: block;
+			margin-left: auto;
+			margin-right: auto;
+		}
+		.btn {
+			width: 240px;
+			margin-left: auto;
+			margin-right: auto;
+			display: block;
+		}
+	}
+
+	.company-footer .company-wrapped .politics {
+		padding: 10px 0;
+	}
+
+	/* ---------------------------- Modal window mobile ------------------------------- */
+
+	.modal-content .close {
+		top: 10px;
+		right: 10px;
+	}
+
+	.modal-window {
+		width: 95%;
+		padding: 15px;
+		padding-bottom: 40px;
+		.modal-title {
+			padding-left: 30px;
+			padding-right: 30px;
+			text-align: center;
+			@include rem('font-size', 24px);
+			padding-top: 20px;
+		}
+		input {
+			padding: 6px 15px;
+		}
+		.form-group {
+			position: relative;
+			i {
+				position: absolute;
+				top: 22%;
+				left: 15px;
+			}
+		}
+		.btn {
+			padding: 10px 0;
+			margin-top: 5px;
+		}
+		.privacy {
+			@include rem('font-size', 12px);
+		}
+	}
+
+	/* -------------------------------- Company footer -------------------------------- */
+
+	.company-footer {
+		.company-wrapped {
+			text-align: center;
+			.politics {
+				display: block;
+				padding-left: 0;
+			}
+			.company-logo {
+				width: 100%;
+				margin-top: 10px;
+				float: none;
+				display: inline-block;
+			}
+		}
+	}
+
+	.modal-politics .modal-content .modal-title {
+		padding-top: 25px;
+	}
+
+	/* Thank button */
+
+	#thank .top-thank .logo {
+		padding-top: 10px;
+		padding-bottom: 20px;
+	}
+
+	#thank h1 {
+		@include rem('font-size', 38px);
+		line-height: 40px;
+	}
+
+	#thank .top-thank {
+		padding: 10px 0 15px 0;
+	}
+
+	#thank .desk-bottom {
+		@include rem('font-size', 24px);
+		color: $allert;
+		font-family: $title;
+	}
+
+	#thank .thank-message {
+		padding: 20px 0;
+	}
+
+	#thank .thank-message .title-desk {
+		margin-bottom: 20px;
+	}
+
+	#thank .thank-message a {
+		@include rem('font-size', 16px);
+	}
+
+}
