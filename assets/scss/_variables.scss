@@ -1,14 +1,13 @@
+/* Grid width */
+
+$descope-width: 960px;
+$gutter: 20px;
+
 /* Fonts */
 
 $base: 'Helvetica Neue', Arial, sans-serif;
 
-$text: 'BloggerSans-Light', $base;
-$title: 'TTLakesCondensed-Bold' ,$base;
+$text: $base;
+$title: $base;
 
 /* Colors */
-
-$title-color: #3b3b3e;
-$main-color: #a0a0a0;
-$allert: #b4a27c;
-$offer: #c0c6d1;
-$choose: #9b9b9b;

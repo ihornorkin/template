@@ -1,5 +1,6 @@
 /* ------------------------------------- Headers styles -------------------------------*/
 @import "mixins";
+@import "variables";
 
 /* Modal animation main setting */
 
@@ -95,7 +96,7 @@ a {
 }
 
 body {
-
+background: url(../images/ololo.png);
 }
 
 header {

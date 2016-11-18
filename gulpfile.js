@@ -13,6 +13,8 @@ const notify		= require('gulp-notify');
 const replace 		= require('gulp-replace');
 const imagemin 		= require('gulp-tinypng-compress');
 const ttf2woff2 	= require('gulp-ttf2woff2');
+const gulpSequence 	= require('gulp-sequence');
+const rename 		= require('gulp-rename');
 
 gulp.task('scss', function(){
 	return gulp.src('assets/scss/**/*.scss')
@@ -31,11 +33,22 @@ gulp.task('scss', function(){
 	});
 
 gulp.task('header', function(){
-	return gulp.src('assets/header/*.scss')
+	return gulp.src('assets/scss/headers.scss')
 	.pipe(sass())
 	.pipe(cssnano())
 	.pipe(autoprefixer(['last 10 versions', '> 1%', 'ie 8'], { cascade: true }))
-	.pipe(gulp.dest('assets/header/'))
+	.pipe(rename({suffix: '.min'}))
+	.pipe(gulp.dest('assets/css/'))
+	.pipe(browserSync.reload({stream: true}))
+	});
+
+gulp.task('thank', function(){
+	return gulp.src('assets/scss/thank.scss')
+	.pipe(sass())
+	.pipe(cssnano())
+	.pipe(autoprefixer(['last 10 versions', '> 1%', 'ie 8'], { cascade: true }))
+	.pipe(rename({suffix: '.min'}))
+	.pipe(gulp.dest('assets/css/'))
 	.pipe(browserSync.reload({stream: true}))
 	});
 
@@ -77,12 +90,6 @@ gulp.task('woff2', function(){
 	.pipe(gulp.dest('assets/fonts/'));
 	});
 
-gulp.task('inject', function() {
-	gulp.src("assets/*.html")
-	.pipe(styleInject())
-	.pipe(gulp.dest("./dist"));
-	});
-
 gulp.task('img', function () {
 	gulp.src('assets/images/**/*.{png,jpg,jpeg}')
 	.pipe(imagemin({
@@ -92,26 +99,27 @@ gulp.task('img', function () {
 	.pipe(gulp.dest('assets/images'));
 	});
 
-gulp.task('watch', ['browser-sync', 'scss', 'header', 'scripts', 'libs'],  function() {
+gulp.task('watch', ['browser-sync', 'libs', 'scss', 'scripts', 'header', 'thank'],  function() {
 	gulp.watch('assets/scss/*.scss', ['header']);
+	gulp.watch('assets/scss/thank.scss', ['thank']);
 	gulp.watch('assets/scss/*.scss', ['scss']);
 	gulp.watch('assets/*.html', browserSync.reload);
 	gulp.watch('assets/js/**/*.js', browserSync.reload);
 	});
 
 gulp.task('remove', function() {
-	gulp.src("assets/header/*.min.css")
+	gulp.src("assets/css/*.min.css")
 	.pipe(replace('../', ''))
-	.pipe(gulp.dest("assets/header"));
+	.pipe(gulp.dest("assets/css"));
 	});
 
 gulp.task('inject', function() {
-	gulp.src("assets/*.html")
+	gulp.src("dist/*.html")
 	.pipe(styleInject())
-	.pipe(gulp.dest("./dist"));
+	.pipe(gulp.dest("dist/"));
 	})
 
-gulp.task('build', ['clean', 'scss', 'scripts', 'remove', 'inject'], function() {
+gulp.task('moving', function() {
 	var buildCss = gulp.src('assets/css/main.css')
 	.pipe(gulp.dest('dist/css'));
 
@@ -130,6 +138,12 @@ gulp.task('build', ['clean', 'scss', 'scripts', 'remove', 'inject'], function() 
 	var buildPhp = gulp.src('assets/video/**.*')
 	.pipe(gulp.dest('dist/video'));
 
-	var buldFavicon = gulp.src('assets/*.png')
+	var buldFavicon = gulp.src('assets/*.png{svg,jpg,ico}')
+	.pipe(gulp.dest('dist'));
 
-	});
+	var buildImage = gulp.src('assets/images/*.*')
+	.pipe(gulp.dest('dist/images'));
+	})
+
+gulp.task('build', gulpSequence(['clean'], ['scss', 'header', 'thank', 'scripts'], ['remove'], ['moving']));
+
