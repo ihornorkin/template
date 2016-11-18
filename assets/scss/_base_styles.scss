@@ -93,8 +93,6 @@ textarea:focus:-ms-input-placeholder      {opacity: 0; transition: opacity 0.3s 
 	left: 0;
 	z-index: 1050;
 	outline: 0;
-	transform: translateY(-200%);
-	transition: .8s;
 	&:after {
 		display: inline-block;
 		vertical-align: middle;
@@ -189,16 +187,6 @@ button.close {
 .modal-backdrop.fade {
 	opacity: 0;
 	filter: alpha(opacity=0);
-}
-
-.fade {
-	//sopacity: 1;
-	//transition: opacity 0.15s linear;
-}
-
-.fade.in {
-	//opacity: 1;
-	//transition: opacity 0.3s linear;
 }
 
 .modal-backdrop.in {

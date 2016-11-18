@@ -56,8 +56,7 @@ gulp.task('browser-sync', function() {
 
 gulp.task('scripts', function() {
 	return gulp.src([
-		'assets/libs/slick-carousel/slick/*.js',
-		'assets/libs/wow.js'
+		'assets/libs/slick-carousel/slick/*.js'
 		])
 	.pipe(concat('libs.min.js'))
 	.pipe(uglify())
@@ -93,7 +92,7 @@ gulp.task('img', function () {
 	.pipe(gulp.dest('assets/images'));
 	});
 
-gulp.task('watch', ['browser-sync', 'libs', 'scss', 'header', 'scripts'], function() {
+gulp.task('watch', ['browser-sync', 'scss', 'header', 'scripts', 'libs'],  function() {
 	gulp.watch('assets/scss/*.scss', ['header']);
 	gulp.watch('assets/scss/*.scss', ['scss']);
 	gulp.watch('assets/*.html', browserSync.reload);
@@ -112,7 +111,7 @@ gulp.task('inject', function() {
 	.pipe(gulp.dest("./dist"));
 	})
 
-gulp.task('build', ['clean', 'scss', 'scripts', 'remove', 'inject',], function() {
+gulp.task('build', ['clean', 'scss', 'scripts', 'remove', 'inject'], function() {
 	var buildCss = gulp.src('assets/css/main.css')
 	.pipe(gulp.dest('dist/css'));
 

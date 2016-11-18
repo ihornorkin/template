@@ -1,10 +1,4 @@
 //Форма отправки 2.0 //
-
-$('.send-message').click(function() {
-  var question = $('textarea').val();
-  $('.question').attr('value', question);
-});
-
 $(function() {
   $("[name=send]").click(function () {
     $(":input.error").removeClass('error');
@@ -20,7 +14,7 @@ $(function() {
     $(ref).each(function() {
       if ($(this).val() == '') {
         var errorfield = $(this);
-        $(this).addClass('error').parent('label').parent('.field').append('<div class="allert"><span>Заполните это поле</span></div>');
+        $(this).addClass('error').parent('label').append('<div class="allert"><span>Заполните это поле</span></div>');
         error = 1;
         $(":input.error:first").focus();
         return;
@@ -29,7 +23,7 @@ $(function() {
         if ($(this).attr("type") == 'email') {
           if(!pattern.test($(this).val())) {
             $("[name=email]").val('');
-            $(this).addClass('error').parent('label').parent('.field').append('<div class="allert"><span>Укажите коректный e-mail</span></div>');
+            $(this).addClass('error').parent('label').append('<div class="allert"><span>Укажите коректный e-mail</span></div>');
             error = 1;
             $(":input.error:first").focus();
           }
@@ -38,7 +32,7 @@ $(function() {
         if ( $(this).attr("type") == 'tel') {
           if(!patterntel.test($(this).val())) {
             $("[name=phone]").val('');
-            $(this).addClass('error').parent('label').parent('.field').append('<div class="allert"><span>Укажите коректный номер телефона</span></div>');
+            $(this).addClass('error').parent('label').append('<div class="allert"><span>Укажите коректный номер телефона</span></div>');
             error = 1;
             $(":input.error:first").focus();
           }
@@ -63,10 +57,6 @@ $(function() {
                              $('.modal').hide();
                              $('.modal-backdrop').hide();
                              $('body').removeClass('modal-open').css('padding', 'inherit');
-                             setTimeout(function() {
-                              var url =  document.location.href + 'thank.html';
-                              document.location.href = url;
-                            }, 800)
                            },
                            error: function(xhr, str) {
                             alert('Возникла ошибка: ' + xhr.responseCode);
@@ -89,10 +79,6 @@ $(function() {
                                     $('.modal').hide();
                                     $('.modal-backdrop').hide();
                                     $('body').removeClass('modal-open').css('padding', 'inherit');
-                                    setTimeout(function() {
-                                      var url =  document.location.href + 'thank.html';
-                                      document.location.href = url;
-                                    }, 800)
                                   }}
                                 }),
             error:  function(xhr, str) {
@@ -120,61 +106,5 @@ $(document).ready(function(){
 /* Entering your JS code here */
 
 $(document).ready(function(){
-
-  new WOW().init();
-
-  $(document).one("mouseleave", function (e) {
-   if (e.pageY - $(window).scrollTop() <= 1) {
-    $('#leaving').modal('show');
-  }
-});
-
-  $('.btn-shop').click(function() {
-    var title = $(this).parent().find('h4').text();
-    $('#shop .modal-title').text(title);
-    $('#shop .subject-form').attr('value', title);
-  });
-
-  $( ".form-control" ).focus(function() {
-    $(this).parent().addClass('focus');
-    $(this).parent().find('i').show();
-  });
-
-  $( ".form-control" ).focusout(function() {
-    $(this).parent().removeClass('focus');
-    $(this).parent().find('i').hide();
-  });
-
-  $('#feedback-slider').slick({
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    dots: false,
-    arrows: true
-  });
-
-  $('#feedback-slider-mobile').slick({
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    dots: false,
-    arrows: true
-  });
-
-  $('.how-item').hover(function() {
-    setTimeout(function(){
-      $('.how-we-work .container_12').addClass('step1');
-    }, 3000);
-    setTimeout(function(){
-      $('.how-we-work .container_12').addClass('step2');
-    }, 6000);
-    setTimeout(function(){
-      $('.how-we-work .container_12').addClass('step3');
-    }, 8000);
-    setTimeout(function(){
-      $('.how-we-work .container_12').addClass('step4');
-    }, 9500);
-    setTimeout(function(){
-      $('.how-we-work .container_12').addClass('fina-step');
-    }, 12000);
-  });
 
 });
