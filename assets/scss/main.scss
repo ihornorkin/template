@@ -14,6 +14,12 @@
 
 /* --------------------------------Custom styles--------------------------------------------------- */
 
+/* Placeholder */
+
+input,
+textarea {@include placeholder {
+}}
+
 /* Allert styles */
 
 .allert {
