@@ -1,11 +1,11 @@
-@import "reset";
-@import "fonts";
-@import "font-awesome";
-@import "grid";
-@import "variables";
+@import "inc/reset";
+@import "inc/fonts";
+@import "inc/font-awesome";
+@import "inc/grid";
+@import "inc/variables";
 @import "libs";
-@import "base_styles";
-//@import "animate";
+@import "inc/base_styles";
+//@import "inc/animate";
 @import "headers";
 
 /* Theme settings */
@@ -14,16 +14,12 @@
 
 /* --------------------------------Custom styles--------------------------------------------------- */
 
-/* Placeholder */
-
-input,
-textarea {@include placeholder {
-}}
-
 /* Allert styles */
 
 .allert {
 	text-align: center;
+	position: absolute;
+	width: 100%;
 	span {
 		display: inline-block;
 		color: #FFF;
@@ -185,13 +181,12 @@ textarea {@include placeholder {
 		}
 		p {
 			@include rem('font-size', 14px);
-			color: #000;
 			text-align: left;
 			padding-bottom: 20px;
 		}
 	}
 }
 
-@import "media";
+@import "inc/media";
 @import "thank";
 

@@ -1,6 +1,6 @@
 /* ------------------------------------- Headers styles -------------------------------*/
-@import "mixins";
-@import "variables";
+@import "inc/mixins";
+@import "inc/variables";
 
 /* Modal animation main setting */
 
@@ -35,20 +35,6 @@
 	float: none;
 }
 
-/* Styles for placeholder */
-*::-webkit-input-placeholder {
-
-}
-*:-moz-placeholder {
-
-}
-*::-moz-placeholder {
-
-}
-*:-ms-input-placeholder {
-
-}
-
 /* Absolute centering */
 
 .relative {
@@ -71,6 +57,8 @@
 	border-radius: 50%;
 }
 
+/* Global styles */
+
 html {
 	font-size: 16px;
 }
@@ -90,20 +78,36 @@ a {
 	text-decoration: none;
 }
 
+/* Styles for placeholder */
+
+input,
+textarea {@include placeholder {
+
+}}
+
+/* Styles for inputs field */
+
+input {
+
+}
+
 /* Button settings */
 .btn {
 
 }
 
 header {
+
 }
 
 @media screen and (min-width: 761px) and (max-width: $descope-width + 20px) {
 	header {
+
 	}
 }
 
 @media screen and (max-width: 760px) {
 	header {
+
 	}
 }

@@ -43,6 +43,8 @@ a:hover {
 	outline: 0;
 }
 
+/* Animate placeholder */
+
 input::-webkit-input-placeholder       {opacity: 1; transition: opacity 0.3s ease;}
 input::-moz-placeholder                {opacity: 1; transition: opacity 0.3s ease;}
 input:-moz-placeholder                 {opacity: 1; transition: opacity 0.3s ease;}
@@ -66,10 +68,6 @@ textarea:focus:-ms-input-placeholder      {opacity: 0; transition: opacity 0.3s 
 :focus:-moz-placeholder           {color: transparent;}
 :focus:-ms-input-placeholder      {color: transparent;}
 
-#thank-button {
-	display: none;
-}
-
 /* Hidden in medium sreen */
 
 .hidden-mobile {
@@ -77,6 +75,10 @@ textarea:focus:-ms-input-placeholder      {opacity: 0; transition: opacity 0.3s 
 }
 
 .vissible-mobile {
+	display: none !important;
+}
+
+.visible-medium {
 	display: none !important;
 }
 
@@ -116,11 +118,6 @@ textarea:focus:-ms-input-placeholder      {opacity: 0; transition: opacity 0.3s 
 	box-shadow: 0 3px 9px rgba(0, 0, 0, 0.5);
 	background-clip: padding-box;
 	outline: 0;
-	.form_input {
-		.error {
-			margin-bottom: 5px;
-		}
-	}
 }
 
 .modal-content {
@@ -155,16 +152,11 @@ button.close {
 }
 
 .modal.fade .modal-dialog {
-	-webkit-transform: translate(0, -25%);
-	-ms-transform: translate(0, -25%);
 	transform: translate(0, -25%);
-	-webkit-transition: -webkit-transform 0.3s ease-out;
 	transition: transform 0.3s ease-out;
 }
 
 .modal.in .modal-dialog {
-	-webkit-transform: translate(0, 0);
-	-ms-transform: translate(0, 0);
 	transform: translate(0, 0);
 }
 

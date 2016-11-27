@@ -6,9 +6,18 @@
 		display: block !important;
 	}
 
+	.hidden-medium {
+		display: none !important;
+	}
+
 	.vissible-mobile {
 		display: none !important;
 	}
+
+	.visible-medium {
+		display: block !important;
+	}
+
 	.animated {
 		/*CSS transitions*/
 		-o-transition-property: none !important;
@@ -54,6 +63,10 @@
 
 	.vissible-mobile {
 		display: block !important;
+	}
+
+	.visible-medium {
+		display: none !important;
 	}
 
 	/* Image sizes */

@@ -69,6 +69,8 @@ gulp.task('browser-sync', function() {
 
 gulp.task('scripts', function() {
 	return gulp.src([
+		'assets/libs/common/jquery-2.2.4.min.js',
+		'assets/libs/common/bootstrap.min.js',
 		'assets/libs/slick-carousel/slick/*.js'
 		])
 	.pipe(concat('libs.min.js'))
@@ -138,7 +140,7 @@ gulp.task('moving', function() {
 	var buildPhp = gulp.src('assets/video/**.*')
 	.pipe(gulp.dest('dist/video'));
 
-	var buldFavicon = gulp.src('assets/*.png{svg,jpg,ico}')
+	var buldFavicon = gulp.src('assets/*.{png,svg,jpg,ico}')
 	.pipe(gulp.dest('dist'));
 
 	var buildImage = gulp.src('assets/images/*.*')

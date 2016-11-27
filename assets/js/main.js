@@ -92,19 +92,16 @@ $(function() {
   })
 });
 
-/* Smooth scroll on link */
-
-$(document).ready(function(){
-	$("body").on("click",".custome-link", function (event) {
-		event.preventDefault();
-		var id  = $(this).attr('href'),
-   top = $(id).offset().top;
-   $('body,html').animate({scrollTop: top}, 600);
- });
-});
-
 /* Entering your JS code here */
 
 $(document).ready(function(){
+
+/* Smooth scroll on link */
+  $("body").on("click",".custome-link", function (event) {
+    event.preventDefault();
+    var id  = $(this).attr('href'),
+   top = $(id).offset().top;
+   $('body,html').animate({scrollTop: top}, 600);
+ });
 
 });
