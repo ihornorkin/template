@@ -14,7 +14,7 @@ $(function() {
     $(ref).each(function() {
       if ($(this).val() == '') {
         var errorfield = $(this);
-        $(this).addClass('error').parent('label').append('<div class="allert"><span>Заполните это поле</span></div>');
+        $(this).addClass('error').parent().append('<div class="allert"><span>Заполните это поле</span></div>');
         error = 1;
         $(":input.error:first").focus();
         return;
@@ -23,7 +23,7 @@ $(function() {
         if ($(this).attr("type") == 'email') {
           if(!pattern.test($(this).val())) {
             $("[name=email]").val('');
-            $(this).addClass('error').parent('label').append('<div class="allert"><span>Укажите коректный e-mail</span></div>');
+            $(this).addClass('error').parent().append('<div class="allert"><span>Укажите коректный e-mail</span></div>');
             error = 1;
             $(":input.error:first").focus();
           }
@@ -32,7 +32,7 @@ $(function() {
         if ( $(this).attr("type") == 'tel') {
           if(!patterntel.test($(this).val())) {
             $("[name=phone]").val('');
-            $(this).addClass('error').parent('label').append('<div class="allert"><span>Укажите коректный номер телефона</span></div>');
+            $(this).addClass('error').parent().append('<div class="allert"><span>Укажите коректный номер телефона</span></div>');
             error = 1;
             $(":input.error:first").focus();
           }
