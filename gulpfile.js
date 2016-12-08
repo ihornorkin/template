@@ -32,6 +32,19 @@ gulp.task('scss', function(){
 	.pipe(browserSync.reload({stream: true}))
 	});
 
+gulp.task('style', function(){
+	return gulp.src('assets/scss/**/*.scss')
+	.pipe(sass())
+	.on('error', notify.onError(function(err){
+		return {
+			title: 'Styles',
+			message: err.message
+		}
+		}))
+	.pipe(autoprefixer(['last 10 versions', '> 1%', 'ie 8'], { cascade: true }))
+	.pipe(gulp.dest('assets/css'))
+	});
+
 gulp.task('header', function(){
 	return gulp.src('assets/scss/headers.scss')
 	.pipe(sass())
@@ -147,5 +160,5 @@ gulp.task('moving', function() {
 	.pipe(gulp.dest('dist/images'));
 	})
 
-gulp.task('build', gulpSequence(['clean'], ['scss', 'header', 'thank', 'scripts'], ['remove'], ['moving']));
+gulp.task('build', gulpSequence(['clean'], ['style', 'header', 'thank', 'scripts'], ['remove'], ['moving']));
 
