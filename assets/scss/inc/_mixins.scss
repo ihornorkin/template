@@ -35,14 +35,8 @@ $baseline_px: 16px;
 @mixin phone-only {
   @media (max-width: 599px) { @content; }
 }
-@mixin tablet-portrait-up {
-  @media (min-width: 600px) { @content; }
-}
-@mixin tablet-portait-only {
+@mixin tablet-portait {
   @media (min-width: 600px) and (max-width: 899px) { @content; }
-}
-@mixin tablet-landscape {
-  @media (min-width: 900px) { @content; }
 }
 @mixin tablet-landscape {
   @media (min-width: 900px) and (max-width: 1199px) { @content; }
