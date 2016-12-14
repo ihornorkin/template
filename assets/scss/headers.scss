@@ -1,6 +1,7 @@
 /* ------------------------------------- Headers styles -------------------------------*/
 @import "inc/mixins";
 @import "inc/variables";
+@import "inc/grid";
 
 /* Modal animation main setting */
 
@@ -88,11 +89,6 @@ textarea {@include placeholder {
 /* Styles for inputs field */
 
 input {
-
-}
-
-/* Button settings */
-.btn {
 
 }
 
