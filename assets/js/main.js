@@ -14,7 +14,7 @@ $(function() {
     $(ref).each(function() {
       if ($(this).val() == '') {
         var errorfield = $(this);
-        $(this).addClass('error').parent().append('<div class="allert"><span>Заполните это поле</span></div>');
+        $(this).addClass('error').parent().append('<div class="allert" title="Заполните это поле"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i></div>');
         error = 1;
         $(":input.error:first").focus();
         return;
@@ -23,7 +23,7 @@ $(function() {
         if ($(this).attr("type") == 'email') {
           if(!pattern.test($(this).val())) {
             $("[name=email]").val('');
-            $(this).addClass('error').parent().append('<div class="allert"><span>Укажите коректный e-mail</span></div>');
+            $(this).addClass('error').parent().append('<div class="allert" title="Укажите коректный e-mail"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i></div>');
             error = 1;
             $(":input.error:first").focus();
           }
@@ -32,7 +32,7 @@ $(function() {
         if ( $(this).attr("type") == 'tel') {
           if(!patterntel.test($(this).val())) {
             $("[name=phone]").val('');
-            $(this).addClass('error').parent().append('<div class="allert"><span>Укажите коректный номер телефона</span></div>');
+            $(this).addClass('error').parent().append('<div class="allert" title="Укажите коректный номер телефона"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i></div>');
             error = 1;
             $(":input.error:first").focus();
           }
@@ -91,6 +91,44 @@ $(function() {
     return false;
   })
 });
+
+/* Politics modal */
+
+var privacy, refusing, compliance, destination;
+$('[data-href="disclaimer"]').one('click', function() {
+
+  var nameDisclaimer = $(this).attr('id');
+
+  $.get('disclaimer.html', function (data) {
+    privacy = $(data).closest('#privacy').html();
+    refusing = $(data).closest('#refusing').html();
+    compliance = $(data).closest('#compliance').html();
+    disclaimerDest(nameDisclaimer);
+  });
+
+});
+
+$('[data-href="disclaimer"]').click(function() {
+  var nameDisclaimer = $(this).attr('id');
+  disclaimerDest(nameDisclaimer);
+});
+
+destination = $('#disclaimer .content');
+function disclaimerDest(nameDisclaimer) {
+
+  switch (nameDisclaimer) {
+    case 'privacy':
+    destination.html(privacy);
+    break;
+    case 'refusing':
+    destination.html(refusing);
+    break;
+    case 'compliance':
+    destination.html(compliance);
+    break;
+  };
+
+};
 
 /* Entering your JS code here */
 

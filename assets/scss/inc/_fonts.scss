@@ -1,1 +1,13 @@
 /* ------------------------------------- Fonts ---------------------------------------------*/
+
+@font-face {
+  font-family: '';
+  src:        url('../fonts/.woff2') format('woff2'),
+              url('../fonts/.woff') format('woff'),
+              url('../fonts/.eot?#iefix') format('embedded-opentype'),
+              url('../fonts/.otf')  format('opentype'),
+              url('../fonts/.ttf')  format('truetype'),
+              url('../fonts/.svg#ProximaNova-Extrabld') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}

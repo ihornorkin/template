@@ -11,14 +11,6 @@
 	transition: .8s;
 }
 
-.text-left {
-	text-align: left;
-}
-
-.text-right {
-	text-align: right;
-}
-
 .text-center {
 	text-align: center;
 }
@@ -32,31 +24,21 @@
 	float: right;
 }
 
-.float-none {
-	float: none;
-}
-
-/* Absolute centering */
-
-.relative {
-	position: relative;
-}
-
-.absolute-center {
-	display: block;
-	position: absolute;
-	left: 0;
-	right: 0;
-	top: 0;
-	bottom: 0;
-	margin: auto;
-}
-
 /* Circle element */
 
 .circle {
 	border-radius: 50%;
 }
+
+/* Button style */
+
+.btn {
+	&:hover,
+	&:active {
+
+	}
+}
+
 
 /* Global styles */
 
