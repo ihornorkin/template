@@ -44,7 +44,7 @@ $(function() {
         $(this).attr('disabled', true);
       });
       $(send_options).each(function() {
-        $(btn).after('<p class="sending">Отправление заявки...</p>')
+        $('#sending').slideDown('400');
         if ($(this).val() == '') {
           $.ajax({
             type: 'POST',
@@ -54,9 +54,14 @@ $(function() {
               setTimeout(function(){ $('form').trigger("reset");
                 $("[name=send]").removeAttr("disabled"); }, 1000);
                              //Настройки модального окна после удачной отправки
-                             $('.modal').hide();
-                             $('.modal-backdrop').hide();
-                             $('body').removeClass('modal-open').css('padding', 'inherit');
+                             setTimeout(function() {
+                              $('#sending-message').slideUp('400');
+                            }, 3000);
+                             $('#thank').modal('show');
+                             setTimeout(function() {
+                              $('#thank').modal('hide');
+                              $('.modal').modal('hide');
+                            }, 4000);
                            },
                            error: function(xhr, str) {
                             alert('Возникла ошибка: ' + xhr.responseCode);
@@ -76,9 +81,14 @@ $(function() {
                 setTimeout(function(){ $('form').trigger("reset");
                   $("[name=send]").removeAttr("disabled"); }, 1000);
                                     // Настройки модального окна после удачной отправки
-                                    $('.modal').hide();
-                                    $('.modal-backdrop').hide();
-                                    $('body').removeClass('modal-open').css('padding', 'inherit');
+                                    setTimeout(function() {
+                                      $('#sending-message').slideUp('400');
+                                    }, 3000);
+                                    $('#thank').modal('show');
+                                    setTimeout(function() {
+                                      $('#thank').modal('hide');
+                                      $('.modal').modal('hide');
+                                    }, 4000);
                                   }}
                                 }),
             error:  function(xhr, str) {
@@ -134,12 +144,12 @@ function disclaimerDest(nameDisclaimer) {
 
 $(document).ready(function(){
 
-/* Smooth scroll on link */
+  /* Smooth scroll on link */
   $("body").on("click",".custome-link", function (event) {
     event.preventDefault();
     var id  = $(this).attr('href'),
-   top = $(id).offset().top;
-   $('body,html').animate({scrollTop: top}, 600);
- });
+    top = $(id).offset().top;
+    $('body,html').animate({scrollTop: top}, 600);
+  });
 
 });
