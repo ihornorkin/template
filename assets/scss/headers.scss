@@ -3,7 +3,7 @@
 @import "inc/variables";
 @import "inc/grid";
 
-/* Modal animation main setting */
+/* Reset in inline html */
 
 .modal {
 	display: block !important;
@@ -11,23 +11,51 @@
 	transition: .8s;
 }
 
-.text-center {
-	text-align: center;
+a {
+	text-decoration: none;
 }
 
-/* Floats */
-.float-left {
-	float: left;
+/* Service global classes */
+
+.relative {
+	position: relative;
+}
+
+.text-center {
+	text-align: center;
 }
 
 .float-right {
 	float: right;
 }
 
-/* Circle element */
+/* Global styles */
 
-.circle {
-	border-radius: 50%;
+body {
+	font-family: $text;
+}
+
+/* Heading fonts */
+h1, h2, h3, h4 ,h5, h6 {
+}
+
+h1 {
+
+}
+
+/* Styles for placeholder */
+
+input,
+textarea {
+	@include placeholder {
+
+	}
+}
+
+/* Styles for inputs field */
+
+input {
+
 }
 
 /* Button style */
@@ -39,40 +67,7 @@
 	}
 }
 
-
-/* Global styles */
-
-html {
-	font-size: 16px;
-}
-
-body {
-	font-family: $text;
-}
-
-/* Heading fonts */
-h1, h2, h3, h4 ,h5, h6 {
-}
-
-h1 {
-}
-
-a {
-	text-decoration: none;
-}
-
-/* Styles for placeholder */
-
-input,
-textarea {@include placeholder {
-
-}}
-
-/* Styles for inputs field */
-
-input {
-
-}
+/* Header */
 
 header {
 
@@ -80,26 +75,25 @@ header {
 
 /* Media queries */
 
+/* Big descope fullhd and more */
 @include big-desktop {
-	header {
 
-	}
 }
 
 @include tablet-portait {
-	header {
 
-	}
-}
-
-@include tablet-landscape {
-	header {
-
-	}
 }
 
 @include phone-only {
-	header {
 
-	}
+}
+
+/* Landscape style in header */
+
+@include tablet-landscape {
+
+}
+
+@include phone-landscape {
+
 }

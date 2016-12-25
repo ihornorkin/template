@@ -15,10 +15,12 @@
 
 /* Allert styles */
 
-.allert {
-	position: absolute;
-	right: 45px;
-	top: 0;
+.form-inline {
+	.allert {
+		left: auto;
+		right: 0;
+		display: inline-block;
+	}
 }
 
 /* Footer */
@@ -27,22 +29,9 @@
 
 }
 
-/* -------------------------- Company footer --------------------------------- */
-
-@keyframes slide {
-	0% {
-		transform: translate(-200%, 0%);
-	}
-	50% {
-		transform: translate(800%, 0%);
-	}
-	100% {
-		transform: translate(-200%, 0%);
-	}
-}
+/* Company footer */
 
 .company-footer {
-	/* Company Footer bg */
 	background-color: #202020;
 	padding: 15px 0;
 	.company-wrapped {
@@ -53,53 +42,30 @@
 			@include rem('font-size', 14px);
 			display: inline-block;
 		}
-		.politics:hover {
-			opacity: .6;
+		&:hover,
+		&:active {
+
 		}
 	}
 	.company-logo {
 		float: right;
 	}
-	.company-logo:hover {
-		opacity: .6;
-	}
-	.gs_spots {
-		display: inline-block;
-		vertical-align: middle;
-		float: right;
-	}
-	.gs_spots svg {
-		fill: #666666;
-	}
 	svg {
-		margin-right: 10px;
 		width: 95px;
+		height: 40px;
 		opacity: 1;
-		transition: all 0.3s;
-	}
-	#blick {
-		transform: translate(-100%, 0%);
-		fill: rgba(0, 0, 0, .4);
-		box-shadow: 0 0 10px rgba(0,0,0,1);
-	}
-	#blick {
-		transform: translate(-100%, 0%);
-		fill: rgba(0, 0, 0, .4);
-		box-shadow: 0 0 10px rgba(0,0,0,1);
-	}
-	.gs_spots:hover #blick {
-		animation: slide 1s ease 1 reverse;
-		animation-duration: 2s;
+		fill: #666666;
+		transition: .4s;
+		&:hover,
+		&:active {
+
+		}
 	}
 }
 
 /* Modal window custom styles */
 
 /* modal styles and sizes */
-
-.modal-desk {
-	@include rem('font-size', 24px);
-}
 
 .modal-window {
 	width: 380px;
@@ -113,6 +79,9 @@
 
 .modal-content {
 	margin-top: 0;
+	p {
+
+	}
 	.close {
 		width: 30px;
 		height: 30px;
@@ -121,15 +90,15 @@
 		&:before,
 		&:after {
 			content: "";
-			width: 29px;
+			width: 28px;
 			height: 2px;
+			margin-top: -1px;
+			margin-left: -14px;
 			background: #000;
 			position: absolute;
 			left: 50%;
 			right: 50%;
 			transform: rotate(45deg);
-			margin-top: -1px;
-			margin-left: -14.5px;
 			transition: .4s;
 		}
 		&:after {

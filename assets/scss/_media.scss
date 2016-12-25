@@ -90,10 +90,6 @@
 
 	}
 
-	.company-footer .company-wrapped .politics {
-		padding: 10px 0;
-	}
-
 	/* ---------------------------- Modal window mobile ------------------------------- */
 
 	.modal-content .close {
@@ -111,24 +107,6 @@
 			@include rem('font-size', 24px);
 			padding-top: 20px;
 		}
-		input {
-			padding: 6px 15px;
-		}
-		.form-group {
-			position: relative;
-			i {
-				position: absolute;
-				top: 22%;
-				left: 15px;
-			}
-		}
-		.btn {
-			padding: 10px 0;
-			margin-top: 5px;
-		}
-		.privacy {
-			@include rem('font-size', 12px);
-		}
 	}
 
 	/* -------------------------------- Company footer -------------------------------- */
@@ -145,6 +123,7 @@
 				margin-top: 10px;
 				float: none;
 				display: inline-block;
+				text-align: center;
 			}
 		}
 	}

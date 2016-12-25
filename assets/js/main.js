@@ -1,4 +1,19 @@
-//Форма отправки 2.0 //
+/* Entering your JS code here */
+
+$(document).ready(function(){
+
+  /* Smooth scroll on link */
+  $("body").on("click",".custome-link", function (event) {
+    event.preventDefault();
+    var id  = $(this).attr('href'),
+    top = $(id).offset().top;
+    $('body,html').animate({scrollTop: top}, 600);
+  });
+
+});
+
+/* Form validation and oad politics */
+
 $(function() {
   $("[name=send]").click(function () {
     $(":input.error").removeClass('error');
@@ -14,7 +29,7 @@ $(function() {
     $(ref).each(function() {
       if ($(this).val() == '') {
         var errorfield = $(this);
-        $(this).addClass('error').parent().append('<div class="allert" title="Заполните это поле"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i></div>');
+        $(this).addClass('error').parent().append('<i title="Заполните это поле" class="fa fa-exclamation-triangle allert" aria-hidden="true"></i>');
         error = 1;
         $(":input.error:first").focus();
         return;
@@ -23,7 +38,7 @@ $(function() {
         if ($(this).attr("type") == 'email') {
           if(!pattern.test($(this).val())) {
             $("[name=email]").val('');
-            $(this).addClass('error').parent().append('<div class="allert" title="Укажите коректный e-mail"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i></div>');
+            $(this).addClass('error').parent().append('<i class="fa fa-exclamation-triangle" title="Укажите коректный e-mail" aria-hidden="true"></i>');
             error = 1;
             $(":input.error:first").focus();
           }
@@ -32,7 +47,7 @@ $(function() {
         if ( $(this).attr("type") == 'tel') {
           if(!patterntel.test($(this).val())) {
             $("[name=phone]").val('');
-            $(this).addClass('error').parent().append('<div class="allert" title="Укажите коректный номер телефона"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i></div>');
+            $(this).addClass('error').parent().append('<i title="Укажите коректный номер телефона" class="fa fa-exclamation-triangle" aria-hidden="true"></i>');
             error = 1;
             $(":input.error:first").focus();
           }
@@ -44,6 +59,7 @@ $(function() {
         $(this).attr('disabled', true);
       });
       $(send_options).each(function() {
+        $('#sending').append('<p class="sending">Отправка данных...</p>');
         $('#sending').slideDown('400');
         if ($(this).val() == '') {
           $.ajax({
@@ -53,16 +69,18 @@ $(function() {
             success: function() {
               setTimeout(function(){ $('form').trigger("reset");
                 $("[name=send]").removeAttr("disabled"); }, 1000);
-                             //Настройки модального окна после удачной отправки
+                             //Succes calback
                              setTimeout(function() {
                               $('#sending-message').slideUp('400');
+                              $('#sending p').remove();
                             }, 3000);
+                             $('.modal').modal('hide');
                              $('#thank').modal('show');
                              setTimeout(function() {
                               $('#thank').modal('hide');
-                              $('.modal').modal('hide');
                             }, 4000);
                            },
+                           //Error callback
                            error: function(xhr, str) {
                             alert('Возникла ошибка: ' + xhr.responseCode);
                           }
@@ -80,17 +98,19 @@ $(function() {
               statusCode: {0:function() {
                 setTimeout(function(){ $('form').trigger("reset");
                   $("[name=send]").removeAttr("disabled"); }, 1000);
-                                    // Настройки модального окна после удачной отправки
+                                    //Succes calback
                                     setTimeout(function() {
                                       $('#sending-message').slideUp('400');
+                                      $('#sending p').remove();
                                     }, 3000);
+                                    $('.modal').modal('hide');
                                     $('#thank').modal('show');
                                     setTimeout(function() {
                                       $('#thank').modal('hide');
-                                      $('.modal').modal('hide');
                                     }, 4000);
                                   }}
                                 }),
+            //Error callback
             error:  function(xhr, str) {
               alert('Возникла ошибка: ' + xhr.responseCode);
             }
@@ -139,17 +159,3 @@ function disclaimerDest(nameDisclaimer) {
   };
 
 };
-
-/* Entering your JS code here */
-
-$(document).ready(function(){
-
-  /* Smooth scroll on link */
-  $("body").on("click",".custome-link", function (event) {
-    event.preventDefault();
-    var id  = $(this).attr('href'),
-    top = $(id).offset().top;
-    $('body,html').animate({scrollTop: top}, 600);
-  });
-
-});
