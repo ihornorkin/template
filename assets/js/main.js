@@ -38,7 +38,7 @@ $(function() {
         if ($(this).attr("type") == 'email') {
           if(!pattern.test($(this).val())) {
             $("[name=email]").val('');
-            $(this).addClass('error').parent().append('<i class="fa fa-exclamation-triangle" title="Укажите коректный e-mail" aria-hidden="true"></i>');
+            $(this).addClass('error').parent().append('<i class="fa fa-exclamation-triangle allert" title="Укажите коректный e-mail" aria-hidden="true"></i>');
             error = 1;
             $(":input.error:first").focus();
           }
@@ -47,7 +47,7 @@ $(function() {
         if ( $(this).attr("type") == 'tel') {
           if(!patterntel.test($(this).val())) {
             $("[name=phone]").val('');
-            $(this).addClass('error').parent().append('<i title="Укажите коректный номер телефона" class="fa fa-exclamation-triangle" aria-hidden="true"></i>');
+            $(this).addClass('error').parent().append('<i title="Укажите коректный номер телефона" class="fa fa-exclamation-triangle allert" aria-hidden="true"></i>');
             error = 1;
             $(":input.error:first").focus();
           }

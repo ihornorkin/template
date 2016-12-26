@@ -1,4 +1,19 @@
-//Форма отправки 2.0 //
+/* Entering your JS code here */
+
+$(document).ready(function(){
+
+  /* Smooth scroll on link */
+  $("body").on("click",".custome-link", function (event) {
+    event.preventDefault();
+    var id  = $(this).attr('href'),
+    top = $(id).offset().top;
+    $('body,html').animate({scrollTop: top}, 600);
+  });
+
+});
+
+/* Form validation and oad politics */
+
 $(function() {
   $("[name=send]").click(function () {
     $(":input.error").removeClass('error');
@@ -14,7 +29,7 @@ $(function() {
     $(ref).each(function() {
       if ($(this).val() == '') {
         var errorfield = $(this);
-        $(this).addClass('error').parent('label').append('<div class="allert"><span>Заполните это поле</span></div>');
+        $(this).addClass('error').parent().append('<i title="Заполните это поле" class="fa fa-exclamation-triangle allert" aria-hidden="true"></i>');
         error = 1;
         $(":input.error:first").focus();
         return;
@@ -23,7 +38,7 @@ $(function() {
         if ($(this).attr("type") == 'email') {
           if(!pattern.test($(this).val())) {
             $("[name=email]").val('');
-            $(this).addClass('error').parent('label').append('<div class="allert"><span>Укажите коректный e-mail</span></div>');
+            $(this).addClass('error').parent().append('<i class="fa fa-exclamation-triangle allert" title="Укажите коректный e-mail" aria-hidden="true"></i>');
             error = 1;
             $(":input.error:first").focus();
           }
@@ -32,7 +47,7 @@ $(function() {
         if ( $(this).attr("type") == 'tel') {
           if(!patterntel.test($(this).val())) {
             $("[name=phone]").val('');
-            $(this).addClass('error').parent('label').append('<div class="allert"><span>Укажите коректный номер телефона</span></div>');
+            $(this).addClass('error').parent().append('<i title="Укажите коректный номер телефона" class="fa fa-exclamation-triangle allert" aria-hidden="true"></i>');
             error = 1;
             $(":input.error:first").focus();
           }
@@ -44,7 +59,8 @@ $(function() {
         $(this).attr('disabled', true);
       });
       $(send_options).each(function() {
-        $(btn).after('<p class="sending">Отправление заявки...</p>')
+        $('#sending').append('<p class="sending">Отправка данных...</p>');
+        $('#sending').slideDown('400');
         if ($(this).val() == '') {
           $.ajax({
             type: 'POST',
@@ -53,11 +69,18 @@ $(function() {
             success: function() {
               setTimeout(function(){ $('form').trigger("reset");
                 $("[name=send]").removeAttr("disabled"); }, 1000);
-                             //Настройки модального окна после удачной отправки
-                             $('.modal').hide();
-                             $('.modal-backdrop').hide();
-                             $('body').removeClass('modal-open').css('padding', 'inherit');
+                             //Succes calback
+                             setTimeout(function() {
+                              $('#sending-message').slideUp('400');
+                              $('#sending p').remove();
+                            }, 3000);
+                             $('.modal').modal('hide');
+                             $('#thank').modal('show');
+                             setTimeout(function() {
+                              $('#thank').modal('hide');
+                            }, 4000);
                            },
+                           //Error callback
                            error: function(xhr, str) {
                             alert('Возникла ошибка: ' + xhr.responseCode);
                           }
@@ -75,12 +98,19 @@ $(function() {
               statusCode: {0:function() {
                 setTimeout(function(){ $('form').trigger("reset");
                   $("[name=send]").removeAttr("disabled"); }, 1000);
-                                    // Настройки модального окна после удачной отправки
-                                    $('.modal').hide();
-                                    $('.modal-backdrop').hide();
-                                    $('body').removeClass('modal-open').css('padding', 'inherit');
+                                    //Succes calback
+                                    setTimeout(function() {
+                                      $('#sending-message').slideUp('400');
+                                      $('#sending p').remove();
+                                    }, 3000);
+                                    $('.modal').modal('hide');
+                                    $('#thank').modal('show');
+                                    setTimeout(function() {
+                                      $('#thank').modal('hide');
+                                    }, 4000);
                                   }}
                                 }),
+            //Error callback
             error:  function(xhr, str) {
               alert('Возникла ошибка: ' + xhr.responseCode);
             }
@@ -92,16 +122,40 @@ $(function() {
   })
 });
 
-/* Entering your JS code here */
+/* Politics modal */
 
-$(document).ready(function(){
+var privacy, refusing, compliance, destination;
+$('[data-href="disclaimer"]').one('click', function() {
 
-/* Smooth scroll on link */
-  $("body").on("click",".custome-link", function (event) {
-    event.preventDefault();
-    var id  = $(this).attr('href'),
-   top = $(id).offset().top;
-   $('body,html').animate({scrollTop: top}, 600);
- });
+  var nameDisclaimer = $(this).attr('id');
+
+  $.get('disclaimer.html', function (data) {
+    privacy = $(data).closest('#privacy').html();
+    refusing = $(data).closest('#refusing').html();
+    compliance = $(data).closest('#compliance').html();
+    disclaimerDest(nameDisclaimer);
+  });
 
 });
+
+$('[data-href="disclaimer"]').click(function() {
+  var nameDisclaimer = $(this).attr('id');
+  disclaimerDest(nameDisclaimer);
+});
+
+destination = $('#disclaimer .content');
+function disclaimerDest(nameDisclaimer) {
+
+  switch (nameDisclaimer) {
+    case 'privacy':
+    destination.html(privacy);
+    break;
+    case 'refusing':
+    destination.html(refusing);
+    break;
+    case 'compliance':
+    destination.html(compliance);
+    break;
+  };
+
+};

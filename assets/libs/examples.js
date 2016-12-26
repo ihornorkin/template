@@ -40,6 +40,18 @@ $(your-selector).slick({
   slidesToShow: 1
 });
 
+/* Video slider */
+
+  $(you-selector).on('afterChange',function(e,o){$('iframe').each(function(){$(this)[0].contentWindow.postMessage('{"event":"command","func":"' + 'stopVideo' + '","args":""}', '*');
+});
+}).slick({
+  infinite: true,
+  slidesToShow: 1,
+  arrows: false,
+  dots: true,
+  draggable: false
+});
+
     /* Smooth scroll on link */
   $("body").on("click",".custome-link", function (event) {
     event.preventDefault();
@@ -47,6 +59,10 @@ $(your-selector).slick({
     top = $(id).offset().top;
     $('body,html').animate({scrollTop: top}, 600);
   });
+
+/* Wow js */
+
+new WOW().init();
 
 /* Need viewport-checker https://github.com/dirkgroenen/jQuery-viewport-checker */
 
