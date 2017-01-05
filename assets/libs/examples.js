@@ -61,6 +61,7 @@ $(your-selector).slick({
   });
 
 /* Wow js */
+/* Need wow.js http://mynameismatthieu.com/WOW/ */
 
 new WOW().init();
 
@@ -135,3 +136,11 @@ var clock = $('.timer').FlipClock(diff, {
     this.parentNode.replaceChild(iframe, this);
   }
 }
+
+/* Fancybox init */
+/* Need fancybox http://fancyapps.com/fancybox/ */
+
+  $(selector).fancybox({
+    openEffect  : 'none',
+    closeEffect : 'none'
+  });

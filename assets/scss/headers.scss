@@ -1,33 +1,8 @@
-/* ------------------------------------- Headers styles -------------------------------*/
 @import "inc/mixins";
 @import "inc/variables";
+@import "inc/base_styles";
 @import "inc/grid";
-
-/* Reset in inline html */
-
-.modal {
-	display: block !important;
-	transform: translateY(-200%);
-	transition: .8s;
-}
-
-a {
-	text-decoration: none;
-}
-
-/* Service global classes */
-
-.relative {
-	position: relative;
-}
-
-.text-center {
-	text-align: center;
-}
-
-.float-right {
-	float: right;
-}
+/* ------------------------------------- Headers styles ------------------------------- */
 
 /* Global styles */
 

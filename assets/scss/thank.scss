@@ -4,12 +4,12 @@
 #thank {
 }
 
-@media screen and (min-width: 761px) and (max-width: $descope-width + 20px) {
+@include tablet-portait {
 	#thank {
 	}
 }
 
-@media screen and (max-width: 760px) {
+@include phone-only {
 	#thank {
 	}
 }

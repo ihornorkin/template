@@ -1,11 +1,10 @@
+@import "inc/variables";
+
 html {
-	font-size: 16px;
+	font-size: $baseline_px;
 }
 
-$baseline_px: 16px;
-
 @mixin rem($property, $px_values) {
-
 	$baseline_rem: ($baseline_px / 1rem);
 	#{$property}: $px_values;
 	@if type-of($px_values) == 'number' {
@@ -23,7 +22,6 @@ $baseline_px: 16px;
 			}
 		}
 		#{$property}: $rem_values;
-
 	}
 
 }
@@ -43,7 +41,7 @@ $baseline_px: 16px;
 	@media (max-width: 599px) and (orientation: landscape) { @content; }
 }
 @mixin tablet-portait {
-  @media (min-width: 600px) and (max-width: 1199px) { @content; }
+  @media (min-width: 600px) and (max-width: $descope-width + 20px) { @content; }
 }
 @mixin tablet-landscape {
   @media (min-width: 900px) and (max-width: 1199px) and (orientation: landscape) { @content; }

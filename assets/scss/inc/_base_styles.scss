@@ -1,16 +1,18 @@
-/* ---------------------------------------------------- input base styles --------------------------------------*/
+/* Hidden modal in load */
+
+.modal {
+	display: block !important;
+	transform: translateY(-200%);
+	transition: .8s;
+}
+
+/* input base styles */
 
 a,
 input[type="submit"],
 input[type="button"],
 button{
-	transition: color .3s ease-in, border-color .3s ease-in, background-color .3s ease-in, opacity .3s ease-in;
 	outline: none;
-}
-
-input[type="submit"],
-input[type="button"],
-button {
 	display: inline-block;
 }
 
@@ -21,7 +23,6 @@ input[type="number"],
 input[type="tel"],
 textarea,
 select {
-	transition: color .3s ease-in, border-color .3s ease-in, background-color .3s ease-in, opacity .3s ease-in;
 	outline: none;
 }
 
@@ -30,21 +31,8 @@ button {
 	display: inline-block;
 }
 
-a:hover,
-input:hover,
-textarea:hover,
-i:hover {
-	transition: color .3s ease-in, border-color .3s ease-in, background-color .3s ease-in, opacity .3s ease-in;
-}
-
 a {
 	text-decoration: none;
-	background-color: transparent;
-}
-
-a:active,
-a:hover {
-	outline: 0;
 }
 
 /* Animate placeholder */
@@ -72,7 +60,7 @@ textarea:focus:-ms-input-placeholder      {opacity: 0; transition: opacity 0.3s 
 :focus:-moz-placeholder           {color: transparent;}
 :focus:-ms-input-placeholder      {color: transparent;}
 
-/* Hidden in medium sreen */
+/* Hidden in desctop */
 
 .hidden-mobile {
 	display: block !important;
@@ -84,132 +72,6 @@ textarea:focus:-ms-input-placeholder      {opacity: 0; transition: opacity 0.3s 
 
 .visible-medium {
 	display: none !important;
-}
-
-/* ---------------------- Modal window bootstrap -------------------------- */
-
-.modal {
-	text-align: center;
-	display: block !important;
-	overflow: hidden;
-	position: fixed;
-	top: 0;
-	right: 0;
-	bottom: 0;
-	left: 0;
-	z-index: 1050;
-	outline: 0;
-	&:after {
-		display: inline-block;
-		vertical-align: middle;
-		width: 0;
-		height: 100%;
-		content: '';
-	}
-}
-
-.fade.in {
-	transform: translateX(0);
-}
-
-.modal-window {
-	display: inline-block;
-	vertical-align: middle;
-	position: relative;
-	box-sizing: border-box;
-	border: 1px solid rgba(0, 0, 0, 0.2);
-	border-radius: 6px;
-	box-shadow: 0 3px 9px rgba(0, 0, 0, 0.5);
-	background-clip: padding-box;
-	outline: 0;
-}
-
-.modal-content {
-	background-clip: padding-box;
-	outline: 0;
-	.field {
-		position: relative;
-	}
-	i {
-		position: absolute;
-	}
-	.form_input {
-		display: block;
-		text-align: center;
-	}
-}
-
-button.close {
-	padding: 0;
-	cursor: pointer;
-	background: transparent;
-	border: 0;
-	-webkit-appearance: none;
-}
-
-.modal-open {
-	overflow: hidden;
-	.modal {
-		overflow-x: hidden;
-		overflow-y: auto;
-	}
-}
-
-.modal.fade .modal-dialog {
-	transform: translate(0, -25%);
-	transition: transform 0.3s ease-out;
-}
-
-.modal.in .modal-dialog {
-	transform: translate(0, 0);
-}
-
-.modal-dialog {
-	position: relative;
-	width: auto;
-	margin: 10px;
-}
-
-.modal-backdrop {
-	position: fixed;
-	top: 0;
-	right: 0;
-	bottom: 0;
-	left: 0;
-	z-index: 1040;
-	background-color: #000;
-}
-
-.modal-backdrop.fade {
-	opacity: 0;
-	filter: alpha(opacity=0);
-}
-
-.modal-backdrop.in {
-	opacity: .5;
-	filter: alpha(opacity=50);
-}
-
-.modal.fade .modal-dialog {
-	transform: translate(0, -25%);
-	transition: transform 0.3s ease-out;
-}
-
-.modal-content .close {
-	display: inline;
-	position: absolute;
-	top: 0;
-	right: 0;
-	height: 30px;
-	width: 30px;
-}
-
-.modal-scrollbar-measure {
-	position: absolute;
-	top: -9999px;
-	width: 50px;
-	height: 50px;
-	overflow: scroll;
 }
 
 /* landing inputs */
@@ -227,5 +89,35 @@ input {
 		left: 0;
 		top: 50%;
 		transform: translateY(-50%);
+	}
+}
+
+/* Service global classes */
+
+.relative {
+	position: relative;
+}
+
+.text-center {
+	text-align: center;
+}
+
+.float-right {
+	float: right;
+}
+
+/* Sending */
+
+#sending {
+	border-radius: 5px;
+	border: 4px solid #000;
+	background: #FFF;
+	position: fixed;
+	z-index: 9999;
+	top: 10px;
+	right: 10px;
+	display: none;
+	.sending {
+		padding: 15px;
 	}
 }
