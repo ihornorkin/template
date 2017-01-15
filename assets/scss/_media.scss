@@ -9,8 +9,9 @@
 /* Tablets min-width: 600px and max-width: 899px */
 
 @include tablet-portait {
+
 	.hidden-mobile {
-		display: block !important;
+		display: none !important;
 	}
 
 	.hidden-medium {
@@ -54,6 +55,7 @@
 		display: none;
 	}
 	/* Vissible block */
+
 	.hidden-mobile {
 		display: none !important;
 	}

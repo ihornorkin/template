@@ -27,25 +27,25 @@ html {
 }
 
 @mixin placeholder {
-    &.placeholder { @content; }
-    &:-moz-placeholder { @content; }
-    &::-moz-placeholder { @content; }
-    &:-ms-input-placeholder { @content; }
-    &::-webkit-input-placeholder { @content; }
+	&.placeholder { @content; }
+	&:-moz-placeholder { @content; }
+	&::-moz-placeholder { @content; }
+	&:-ms-input-placeholder { @content; }
+	&::-webkit-input-placeholder { @content; }
 }
 
 @mixin phone-only {
-  @media (max-width: 599px) { @content; }
+	@media (max-width: 599px) { @content; }
 }
 @mixin phone-landscape {
 	@media (max-width: 599px) and (orientation: landscape) { @content; }
 }
 @mixin tablet-portait {
-  @media (min-width: 600px) and (max-width: $descope-width + 20px) { @content; }
+	@media (min-width: 600px) and (max-width: $descope-width + 20px) { @content; }
 }
 @mixin tablet-landscape {
-  @media (min-width: 900px) and (max-width: 1199px) and (orientation: landscape) { @content; }
+	@media (min-width: 900px) and (max-width: 1199px) and (orientation: landscape) { @content; }
 }
 @mixin big-desktop {
-  @media (min-width: 1800px) { @content; }
+	@media (min-width: 1800px) { @content; }
 }

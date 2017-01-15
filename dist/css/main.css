@@ -102,7 +102,7 @@ svg {
 */
   overflow: hidden; }
 
-/* ------------------------------------- Fonts ---------------------------------------------*/
+/* ------------------------------------- Fonts --------------------------------------------- */
 @font-face {
   font-family: '';
   src: url("../fonts/.woff2") format("woff2"), url("../fonts/.woff") format("woff"), url("../fonts/.eot?#iefix") format("embedded-opentype"), url("../fonts/.otf") format("opentype"), url("../fonts/.ttf") format("truetype"), url("../fonts/.svg#ProximaNova-Extrabld") format("svg");
@@ -2284,9 +2284,6 @@ svg {
   overflow: visible;
   clip: auto; }
 
-/* Grid width */
-/* Fonts */
-/* Colors */
 /* Arrows */
 .slick-prev,
 .slick-next {
@@ -2476,18 +2473,30 @@ svg {
 .slick-arrow.slick-hidden {
   display: none; }
 
-/* ---------------------------------------------------- input base styles --------------------------------------*/
+/* Grid width */
+/* Fonts */
+/* Colors */
+html {
+  font-size: 16px; }
+
+/* Grid width */
+/* Fonts */
+/* Colors */
+/* Hidden modal in load */
+.modal {
+  display: block !important;
+  -webkit-transform: translateY(-200%);
+      -ms-transform: translateY(-200%);
+          transform: translateY(-200%);
+  -webkit-transition: .8s;
+  transition: .8s; }
+
+/* input base styles */
 a,
 input[type="submit"],
 input[type="button"],
 button {
-  -webkit-transition: color .3s ease-in, border-color .3s ease-in, background-color .3s ease-in, opacity .3s ease-in;
-  transition: color .3s ease-in, border-color .3s ease-in, background-color .3s ease-in, opacity .3s ease-in;
-  outline: none; }
-
-input[type="submit"],
-input[type="button"],
-button {
+  outline: none;
   display: inline-block; }
 
 input[type="text"],
@@ -2497,28 +2506,14 @@ input[type="number"],
 input[type="tel"],
 textarea,
 select {
-  -webkit-transition: color .3s ease-in, border-color .3s ease-in, background-color .3s ease-in, opacity .3s ease-in;
-  transition: color .3s ease-in, border-color .3s ease-in, background-color .3s ease-in, opacity .3s ease-in;
   outline: none; }
 
 button {
   cursor: pointer;
   display: inline-block; }
 
-a:hover,
-input:hover,
-textarea:hover,
-i:hover {
-  -webkit-transition: color .3s ease-in, border-color .3s ease-in, background-color .3s ease-in, opacity .3s ease-in;
-  transition: color .3s ease-in, border-color .3s ease-in, background-color .3s ease-in, opacity .3s ease-in; }
-
 a {
-  text-decoration: none;
-  background-color: transparent; }
-
-a:active,
-a:hover {
-  outline: 0; }
+  text-decoration: none; }
 
 /* Animate placeholder */
 input::-webkit-input-placeholder {
@@ -2613,9 +2608,9 @@ textarea:focus:-ms-input-placeholder {
 :focus:-ms-input-placeholder {
   color: transparent; }
 
-/* Hidden in medium sreen */
+/* Hidden in desctop */
 .hidden-mobile {
-  display: block !important; }
+  display: none !important; }
 
 .vissible-mobile {
   display: none !important; }
@@ -2623,6 +2618,391 @@ textarea:focus:-ms-input-placeholder {
 .visible-medium {
   display: none !important; }
 
+/* landing inputs */
+input {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box; }
+
+.field {
+  position: relative;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: inline-block; }
+  .field i {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+            transform: translateY(-50%); }
+
+/* Service global classes */
+.relative {
+  position: relative; }
+
+.text-center {
+  text-align: center; }
+
+.float-right {
+  float: right; }
+
+.company-wrapped {
+  width: 100%; }
+
+/* Sending */
+#sending {
+  border-radius: 5px;
+  border: 4px solid #000;
+  background: #FFF;
+  position: fixed;
+  z-index: 9999;
+  top: 10px;
+  right: 10px;
+  display: none; }
+  #sending .sending {
+    padding: 15px; }
+
+/* Grid width */
+/* Fonts */
+/* Colors */
+html {
+  font-size: 16px; }
+
+/* Grid width */
+/* Fonts */
+/* Colors */
+/* ---------------------------------------- Grid system ------------------------------------ */
+body {
+  min-width: 1170px; }
+
+.container_12 {
+  margin-left: auto;
+  margin-right: auto;
+  width: 1170px; }
+
+.grid_1,
+.grid_2,
+.grid_3,
+.grid_4,
+.grid_5,
+.grid_6,
+.grid_7,
+.grid_8,
+.grid_9,
+.grid_10,
+.grid_11,
+.grid_12 {
+  display: inline;
+  float: left;
+  padding-left: 15px;
+  padding-right: 15px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box; }
+
+.container_12 .grid_1 {
+  width: 8.3333%; }
+
+.container_12 .grid_2 {
+  width: 16.6666%; }
+
+.container_12 .grid_3 {
+  width: 25%; }
+
+.container_12 .grid_4 {
+  width: 33.333%; }
+
+.container_12 .grid_5 {
+  width: 41.6666%; }
+
+.container_12 .grid_6 {
+  width: 50%; }
+
+.container_12 .grid_7 {
+  width: 58.3333%; }
+
+.container_12 .grid_8 {
+  width: 66.66%; }
+
+.container_12 .grid_9 {
+  width: 75%; }
+
+.container_12 .grid_10 {
+  width: 83.333%; }
+
+.container_12 .grid_11 {
+  width: 91.66667%; }
+
+.container_12 .grid_12 {
+  width: 100%; }
+
+.container_12 .prefix_1 {
+  margin-left: 8.3333%; }
+
+.container_12 .prefix_2 {
+  margin-left: 16.6666%; }
+
+.container_12 .prefix_3 {
+  margin-left: 25%; }
+
+.container_12 .prefix_4 {
+  margin-left: 33.333%; }
+
+.container_12 .prefix_5 {
+  margin-left: 41.6666%; }
+
+.container_12 .prefix_6 {
+  margin-left: 50%; }
+
+.container_12 .prefix_7 {
+  margin-left: 58.3333%; }
+
+.container_12 .prefix_8 {
+  margin-left: 66.66%; }
+
+.container_12 .prefix_9 {
+  margin-left: 75%; }
+
+.container_12 .prefix_10 {
+  margin-left: 83.333%; }
+
+.container_12 .prefix_11 {
+  margin-left: 91.66667%; }
+
+.clear {
+  clear: both;
+  display: block;
+  overflow: hidden;
+  visibility: hidden;
+  width: 0;
+  height: 0; }
+
+.clearfix:before,
+.clearfix:after,
+.container_12:before,
+.container_12:after {
+  content: '.';
+  display: block;
+  overflow: hidden;
+  visibility: hidden;
+  font-size: 0;
+  line-height: 0;
+  width: 0;
+  height: 0; }
+
+.clearfix:after,
+.container_12:after {
+  clear: both; }
+
+.clearfix,
+.container_12 {
+  zoom: 1; }
+
+@media (min-width: 600px) and (max-width: 1190px) {
+  body {
+    min-width: 85%; }
+  .container_12 {
+    margin-left: auto;
+    margin-right: auto;
+    width: 85%; }
+  .grid_1,
+  .grid_2,
+  .grid_3,
+  .grid_4,
+  .grid_5,
+  .grid_6,
+  .grid_7,
+  .grid_8,
+  .grid_9,
+  .grid_10,
+  .grid_11,
+  .grid_12 {
+    display: inline;
+    float: left;
+    padding-left: 15px;
+    padding-right: 15px;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box; }
+  .push_1, .pull_1,
+  .push_2, .pull_2,
+  .push_3, .pull_3,
+  .push_4, .pull_4,
+  .push_5, .pull_5,
+  .push_6, .pull_6,
+  .push_7, .pull_7,
+  .push_8, .pull_8,
+  .push_9, .pull_9,
+  .push_10, .pull_10,
+  .push_11, .pull_11 {
+    position: relative; }
+  .container_12 .grid_1 {
+    width: 8.3333%; }
+  .container_12 .grid_2 {
+    width: 16.6666%; }
+  .container_12 .grid_3 {
+    width: 25%; }
+  .container_12 .grid_4 {
+    width: 33.333%; }
+  .container_12 .grid_5 {
+    width: 41.6666%; }
+  .container_12 .grid_6 {
+    width: 50%; }
+  .container_12 .grid_7 {
+    width: 58.3333%; }
+  .container_12 .grid_8 {
+    width: 66.66%; }
+  .container_12 .grid_9 {
+    width: 75%; }
+  .container_12 .grid_10 {
+    width: 83.333%; }
+  .container_12 .grid_11 {
+    width: 91.66667%; }
+  .container_12 .grid_12 {
+    width: 100%; }
+  .container_12 .prefix_1 {
+    margin-left: 8.3333%; }
+  .container_12 .prefix_2 {
+    margin-left: 16.6666%; }
+  .container_12 .prefix_3 {
+    margin-left: 25%; }
+  .container_12 .prefix_4 {
+    margin-left: 33.333%; }
+  .container_12 .prefix_5 {
+    margin-left: 41.6666%; }
+  .container_12 .prefix_6 {
+    margin-left: 50%; }
+  .container_12 .prefix_7 {
+    margin-left: 58.3333%; }
+  .container_12 .prefix_8 {
+    margin-left: 66.66%; }
+  .container_12 .prefix_9 {
+    margin-left: 75%; }
+  .container_12 .prefix_10 {
+    margin-left: 83.333%; }
+  .container_12 .prefix_11 {
+    margin-left: 91.66667%; }
+  .clear {
+    clear: both;
+    display: block;
+    overflow: hidden;
+    visibility: hidden;
+    width: 0;
+    height: 0; }
+  .clearfix:before,
+  .clearfix:after,
+  .container_12:before,
+  .container_12:after {
+    content: '.';
+    display: block;
+    overflow: hidden;
+    visibility: hidden;
+    font-size: 0;
+    line-height: 0;
+    width: 0;
+    height: 0; }
+  .clearfix:after,
+  .container_12:after {
+    clear: both; }
+  .clearfix,
+  .container_12 {
+    zoom: 1; } }
+
+@media (max-width: 599px) {
+  body {
+    min-width: 100%; }
+  .container_12 {
+    width: 100%; }
+  .container_12 .grid_1,
+  .container_12 .grid_2,
+  .container_12 .grid_3,
+  .container_12 .grid_4,
+  .container_12 .grid_5,
+  .container_12 .grid_6,
+  .container_12 .grid_7,
+  .container_12 .grid_8,
+  .container_12 .grid_9,
+  .container_12 .grid_10,
+  .container_12 .grid_11,
+  .container_12 .grid_12 {
+    padding-left: 10px;
+    padding-right: 10px;
+    display: block;
+    width: auto;
+    float: none; }
+  .container_12 .grid_sx_1 {
+    width: 8.3333%; }
+  .container_12 .grid_sx_2 {
+    width: 16.6666%; }
+  .container_12 .grid_sx_3 {
+    width: 25%; }
+  .container_12 .grid_sx_4 {
+    width: 33.333%; }
+  .container_12 .grid_sx_5 {
+    width: 41.6666%; }
+  .container_12 .grid_sx_6 {
+    width: 50%; }
+  .container_12 .grid_sx_7 {
+    width: 58.3333%; }
+  .container_12 .grid_sx_8 {
+    width: 66.66%; }
+  .container_12 .grid_sx_9 {
+    width: 75%; }
+  .container_12 .grid_sx_10 {
+    width: 83.333%; }
+  .container_12 .grid_sx_11 {
+    width: 91.66667%; }
+  .container_12 .grid_sx_12 {
+    width: 100%; }
+  .container_12 .prefix_1,
+  .container_12 .prefix_2,
+  .container_12 .prefix_3,
+  .container_12 .prefix_4,
+  .container_12 .prefix_5,
+  .container_12 .prefix_6,
+  .container_12 .prefix_7,
+  .container_12 .prefix_8,
+  .container_12 .prefix_9,
+  .container_12 .prefix_10,
+  .container_12 .prefix_11 {
+    margin-left: 0; }
+  .clear {
+    clear: both;
+    display: block;
+    overflow: hidden;
+    visibility: hidden;
+    width: 0;
+    height: 0; }
+  .clearfix:before,
+  .clearfix:after,
+  .container_12:before,
+  .container_12:after {
+    content: none;
+    display: block;
+    overflow: hidden;
+    visibility: hidden;
+    font-size: 0;
+    line-height: 0;
+    width: 0;
+    height: 0; }
+  .clearfix:after,
+  .container_12:after {
+    clear: both; }
+  .clearfix,
+  .container_12 {
+    zoom: 1; } }
+
+/* ------------------------------------- Headers styles ------------------------------- */
+/* Global styles */
+body {
+  font-family: "Helvetica Neue", Arial, sans-serif; }
+
+/* Heading fonts */
+/* Styles for placeholder */
+/* Styles for inputs field */
+/* Button style */
+/* Header */
+/* Media queries */
+/* Big descope fullhd and more */
+/* Landscape style in header */
 /* ---------------------- Modal window bootstrap -------------------------- */
 .modal {
   text-align: center;
@@ -2653,55 +3033,30 @@ textarea:focus:-ms-input-placeholder {
   position: relative;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  border: 1px solid rgba(0, 0, 0, 0.2);
   border-radius: 6px;
   -webkit-box-shadow: 0 3px 9px rgba(0, 0, 0, 0.5);
           box-shadow: 0 3px 9px rgba(0, 0, 0, 0.5);
   background-clip: padding-box;
-  outline: 0; }
-
-.modal-content {
-  background-clip: padding-box;
-  outline: 0; }
-  .modal-content .field {
+  outline: none; }
+  .modal-window .field {
     position: relative; }
-  .modal-content i {
+  .modal-window i {
     position: absolute; }
-  .modal-content .form_input {
+  .modal-window .form_input {
     display: block;
     text-align: center; }
-
-button.close {
-  padding: 0;
-  cursor: pointer;
-  background: transparent;
-  border: 0;
-  -webkit-appearance: none; }
+  .modal-window .close {
+    position: absolute;
+    padding: 0;
+    cursor: pointer;
+    background: transparent;
+    border: none; }
 
 .modal-open {
   overflow: hidden; }
   .modal-open .modal {
     overflow-x: hidden;
     overflow-y: auto; }
-
-.modal.fade .modal-dialog {
-  -webkit-transform: translate(0, -25%);
-      -ms-transform: translate(0, -25%);
-          transform: translate(0, -25%);
-  -webkit-transition: -webkit-transform 0.3s ease-out;
-  transition: -webkit-transform 0.3s ease-out;
-  transition: transform 0.3s ease-out;
-  transition: transform 0.3s ease-out, -webkit-transform 0.3s ease-out; }
-
-.modal.in .modal-dialog {
-  -webkit-transform: translate(0, 0);
-      -ms-transform: translate(0, 0);
-          transform: translate(0, 0); }
-
-.modal-dialog {
-  position: relative;
-  width: auto;
-  margin: 10px; }
 
 .modal-backdrop {
   position: fixed;
@@ -2720,482 +3075,7 @@ button.close {
   opacity: .5;
   filter: alpha(opacity=50); }
 
-.modal.fade .modal-dialog {
-  -webkit-transform: translate(0, -25%);
-      -ms-transform: translate(0, -25%);
-          transform: translate(0, -25%);
-  -webkit-transition: -webkit-transform 0.3s ease-out;
-  transition: -webkit-transform 0.3s ease-out;
-  transition: transform 0.3s ease-out;
-  transition: transform 0.3s ease-out, -webkit-transform 0.3s ease-out; }
-
-.modal-content .close {
-  display: inline;
-  position: absolute;
-  top: 0;
-  right: 0;
-  height: 30px;
-  width: 30px; }
-
-.modal-scrollbar-measure {
-  position: absolute;
-  top: -9999px;
-  width: 50px;
-  height: 50px;
-  overflow: scroll; }
-
-/* landing inputs */
-input {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box; }
-
-.field {
-  position: relative;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  display: inline-block; }
-  .field i {
-    position: absolute;
-    left: 0;
-    top: 50%;
-    -webkit-transform: translateY(-50%);
-        -ms-transform: translateY(-50%);
-            transform: translateY(-50%); }
-
-/* ------------------------------------- Headers styles -------------------------------*/
-html {
-  font-size: 16px; }
-
-/* Grid width */
-/* Fonts */
-/* Colors */
-html {
-  font-size: 16px; }
-
-/* Grid width */
-/* Fonts */
-/* Colors */
-/* ---------------------------------------- Grid system ------------------------------------ */
-body {
-  min-width: 1170px; }
-
-/* `Containers
-----------------------------------------------------------------------------------------------------*/
-.container_12 {
-  margin-left: auto;
-  margin-right: auto;
-  width: 1170px; }
-
-/* `Grid >> Global
-----------------------------------------------------------------------------------------------------*/
-.grid_1,
-.grid_2,
-.grid_3,
-.grid_4,
-.grid_5,
-.grid_6,
-.grid_7,
-.grid_8,
-.grid_9,
-.grid_10,
-.grid_11,
-.grid_12 {
-  display: inline;
-  float: left;
-  padding-left: 15px;
-  padding-right: 15px;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box; }
-
-.push_1, .pull_1,
-.push_2, .pull_2,
-.push_3, .pull_3,
-.push_4, .pull_4,
-.push_5, .pull_5,
-.push_6, .pull_6,
-.push_7, .pull_7,
-.push_8, .pull_8,
-.push_9, .pull_9,
-.push_10, .pull_10,
-.push_11, .pull_11 {
-  position: relative; }
-
-/* `Grid >> Children (Alpha ~ First, Omega ~ Last)
-----------------------------------------------------------------------------------------------------*/
-.alpha {
-  margin-left: 0; }
-
-.omega {
-  margin-right: 0; }
-
-/* `Grid >> 12 Columns
-----------------------------------------------------------------------------------------------------*/
-.container_12 .grid_1 {
-  width: 8.3333%; }
-
-.container_12 .grid_2 {
-  width: 16.6666%; }
-
-.container_12 .grid_3 {
-  width: 25%; }
-
-.container_12 .grid_4 {
-  width: 33.333%; }
-
-.container_12 .grid_5 {
-  width: 41.6666%; }
-
-.container_12 .grid_6 {
-  width: 50%; }
-
-.container_12 .grid_7 {
-  width: 58.3333%; }
-
-.container_12 .grid_8 {
-  width: 66.66%; }
-
-.container_12 .grid_9 {
-  width: 75%; }
-
-.container_12 .grid_10 {
-  width: 83.333%; }
-
-.container_12 .grid_11 {
-  width: 91.66667%; }
-
-.container_12 .grid_12 {
-  width: 100%; }
-
-/* `Prefix Extra Space >> 12 Columns
-----------------------------------------------------------------------------------------------------*/
-.container_12 .prefix_1 {
-  margin-left: 8.3333%; }
-
-.container_12 .prefix_2 {
-  margin-left: 16.6666%; }
-
-.container_12 .prefix_3 {
-  margin-left: 25%; }
-
-.container_12 .prefix_4 {
-  margin-left: 33.333%; }
-
-.container_12 .prefix_5 {
-  margin-left: 41.6666%; }
-
-.container_12 .prefix_6 {
-  margin-left: 50%; }
-
-.container_12 .prefix_7 {
-  margin-left: 58.3333%; }
-
-.container_12 .prefix_8 {
-  margin-left: 66.66%; }
-
-.container_12 .prefix_9 {
-  margin-left: 75%; }
-
-.container_12 .prefix_10 {
-  margin-left: 83.333%; }
-
-.container_12 .prefix_11 {
-  margin-left: 91.66667%; }
-
-/* `Clear Floated Elements
-----------------------------------------------------------------------------------------------------*/
-/* http://sonspring.com/journal/clearing-floats */
-.clear {
-  clear: both;
-  display: block;
-  overflow: hidden;
-  visibility: hidden;
-  width: 0;
-  height: 0; }
-
-/* http://www.yuiblog.com/blog/2010/09/27/clearfix-reloaded-overflowhidden-demystified */
-.clearfix:before,
-.clearfix:after,
-.container_12:before,
-.container_12:after {
-  content: '.';
-  display: block;
-  overflow: hidden;
-  visibility: hidden;
-  font-size: 0;
-  line-height: 0;
-  width: 0;
-  height: 0; }
-
-.clearfix:after,
-.container_12:after {
-  clear: both; }
-
-/*
-  The following zoom:1 rule is specifically for IE6 + IE7.
-  Move to separate stylesheet if invalid CSS is a problem.
-  */
-.clearfix,
-.container_12 {
-  zoom: 1; }
-
-@media (min-width: 600px) and (max-width: 1199px) {
-  body {
-    min-width: 85%; }
-  /* `Containers
-----------------------------------------------------------------------------------------------------*/
-  .container_12 {
-    margin-left: auto;
-    margin-right: auto;
-    width: 85%; }
-  /* `Grid >> Global
-----------------------------------------------------------------------------------------------------*/
-  .grid_1,
-  .grid_2,
-  .grid_3,
-  .grid_4,
-  .grid_5,
-  .grid_6,
-  .grid_7,
-  .grid_8,
-  .grid_9,
-  .grid_10,
-  .grid_11,
-  .grid_12 {
-    display: inline;
-    float: left;
-    padding-left: 15px;
-    padding-right: 15px;
-    -webkit-box-sizing: border-box;
-            box-sizing: border-box; }
-  .push_1, .pull_1,
-  .push_2, .pull_2,
-  .push_3, .pull_3,
-  .push_4, .pull_4,
-  .push_5, .pull_5,
-  .push_6, .pull_6,
-  .push_7, .pull_7,
-  .push_8, .pull_8,
-  .push_9, .pull_9,
-  .push_10, .pull_10,
-  .push_11, .pull_11 {
-    position: relative; }
-  /* `Grid >> Children (Alpha ~ First, Omega ~ Last)
-----------------------------------------------------------------------------------------------------*/
-  .alpha {
-    margin-left: 0; }
-  .omega {
-    margin-right: 0; }
-  /* `Grid >> 12 Columns
-----------------------------------------------------------------------------------------------------*/
-  .container_12 .grid_1 {
-    width: 8.3333%; }
-  .container_12 .grid_2 {
-    width: 16.6666%; }
-  .container_12 .grid_3 {
-    width: 25%; }
-  .container_12 .grid_4 {
-    width: 33.333%; }
-  .container_12 .grid_5 {
-    width: 41.6666%; }
-  .container_12 .grid_6 {
-    width: 50%; }
-  .container_12 .grid_7 {
-    width: 58.3333%; }
-  .container_12 .grid_8 {
-    width: 66.66%; }
-  .container_12 .grid_9 {
-    width: 75%; }
-  .container_12 .grid_10 {
-    width: 83.333%; }
-  .container_12 .grid_11 {
-    width: 91.66667%; }
-  .container_12 .grid_12 {
-    width: 100%; }
-  /* `Prefix Extra Space >> 12 Columns
-----------------------------------------------------------------------------------------------------*/
-  .container_12 .prefix_1 {
-    margin-left: 8.3333%; }
-  .container_12 .prefix_2 {
-    margin-left: 16.6666%; }
-  .container_12 .prefix_3 {
-    margin-left: 25%; }
-  .container_12 .prefix_4 {
-    margin-left: 33.333%; }
-  .container_12 .prefix_5 {
-    margin-left: 41.6666%; }
-  .container_12 .prefix_6 {
-    margin-left: 50%; }
-  .container_12 .prefix_7 {
-    margin-left: 58.3333%; }
-  .container_12 .prefix_8 {
-    margin-left: 66.66%; }
-  .container_12 .prefix_9 {
-    margin-left: 75%; }
-  .container_12 .prefix_10 {
-    margin-left: 83.333%; }
-  .container_12 .prefix_11 {
-    margin-left: 91.66667%; }
-  /* `Clear Floated Elements
-----------------------------------------------------------------------------------------------------*/
-  /* http://sonspring.com/journal/clearing-floats */
-  .clear {
-    clear: both;
-    display: block;
-    overflow: hidden;
-    visibility: hidden;
-    width: 0;
-    height: 0; }
-  /* http://www.yuiblog.com/blog/2010/09/27/clearfix-reloaded-overflowhidden-demystified */
-  .clearfix:before,
-  .clearfix:after,
-  .container_12:before,
-  .container_12:after {
-    content: '.';
-    display: block;
-    overflow: hidden;
-    visibility: hidden;
-    font-size: 0;
-    line-height: 0;
-    width: 0;
-    height: 0; }
-  .clearfix:after,
-  .container_12:after {
-    clear: both; }
-  /*
-  The following zoom:1 rule is specifically for IE6 + IE7.
-  Move to separate stylesheet if invalid CSS is a problem.
-  */
-  .clearfix,
-  .container_12 {
-    zoom: 1; } }
-
-@media (max-width: 599px) {
-  body {
-    min-width: 100%; }
-  .container_12 {
-    width: 100%; }
-  .container_12 .grid_1,
-  .container_12 .grid_2,
-  .container_12 .grid_3,
-  .container_12 .grid_4,
-  .container_12 .grid_5,
-  .container_12 .grid_6,
-  .container_12 .grid_7,
-  .container_12 .grid_8,
-  .container_12 .grid_9,
-  .container_12 .grid_10,
-  .container_12 .grid_11,
-  .container_12 .grid_12 {
-    padding-left: 10px;
-    padding-right: 10px;
-    display: block;
-    width: auto;
-    float: none; }
-  .container_12 .grid_sx_1 {
-    width: 8.3333%; }
-  .container_12 .grid_sx_2 {
-    width: 16.6666%; }
-  .container_12 .grid_sx_3 {
-    width: 25%; }
-  .container_12 .grid_sx_4 {
-    width: 33.333%; }
-  .container_12 .grid_sx_5 {
-    width: 41.6666%; }
-  .container_12 .grid_sx_6 {
-    width: 50%; }
-  .container_12 .grid_sx_7 {
-    width: 58.3333%; }
-  .container_12 .grid_sx_8 {
-    width: 66.66%; }
-  .container_12 .grid_sx_9 {
-    width: 75%; }
-  .container_12 .grid_sx_10 {
-    width: 83.333%; }
-  .container_12 .grid_sx_11 {
-    width: 91.66667%; }
-  .container_12 .grid_sx_12 {
-    width: 100%; }
-  .container_12 .prefix_1,
-  .container_12 .prefix_2,
-  .container_12 .prefix_3,
-  .container_12 .prefix_4,
-  .container_12 .prefix_5,
-  .container_12 .prefix_6,
-  .container_12 .prefix_7,
-  .container_12 .prefix_8,
-  .container_12 .prefix_9,
-  .container_12 .prefix_10,
-  .container_12 .prefix_11 {
-    margin-left: 0; }
-  /* http://sonspring.com/journal/clearing-floats */
-  .clear {
-    clear: both;
-    display: block;
-    overflow: hidden;
-    visibility: hidden;
-    width: 0;
-    height: 0; }
-  /* http://www.yuiblog.com/blog/2010/09/27/clearfix-reloaded-overflowhidden-demystified */
-  .clearfix:before,
-  .clearfix:after,
-  .container_12:before,
-  .container_12:after {
-    content: none;
-    display: block;
-    overflow: hidden;
-    visibility: hidden;
-    font-size: 0;
-    line-height: 0;
-    width: 0;
-    height: 0; }
-  .clearfix:after,
-  .container_12:after {
-    clear: both; }
-  /*
-  The following zoom:1 rule is specifically for IE6 + IE7.
-  Move to separate stylesheet if invalid CSS is a problem.
-  */
-  .clearfix,
-  .container_12 {
-    zoom: 1; } }
-
-/* Reset in inline html */
-.modal {
-  display: block !important;
-  -webkit-transform: translateY(-200%);
-      -ms-transform: translateY(-200%);
-          transform: translateY(-200%);
-  -webkit-transition: .8s;
-  transition: .8s; }
-
-a {
-  text-decoration: none; }
-
-/* Service global classes */
-.relative {
-  position: relative; }
-
-.text-center {
-  text-align: center; }
-
-.float-right {
-  float: right; }
-
-/* Global styles */
-body {
-  font-family: "Helvetica Neue", Arial, sans-serif; }
-
-/* Heading fonts */
-/* Styles for placeholder */
-/* Styles for inputs field */
-/* Button style */
-/* Header */
-/* Media queries */
-/* Big descope fullhd and more */
-/* Landscape style in header */
-/* Theme settings */
-/* Global fonts */
-/* --------------------------------Custom styles--------------------------------------------------- */
+/* -------------------------------- Custom styles --------------------------------------------------- */
 /* Allert styles */
 .form-inline .allert {
   left: auto;
@@ -3207,39 +3087,32 @@ body {
 .company-footer {
   background-color: #202020;
   padding: 15px 0; }
-  .company-footer .company-wrapped {
-    display: block; }
-    .company-footer .company-wrapped .politics {
-      padding-left: 10px;
-      padding-top: 8px;
-      font-size: 14px;
-      font-size: 0.875rem;
-      display: inline-block; }
+  .company-footer .politics {
+    padding-left: 10px;
+    padding-top: 8px;
+    font-size: 14px;
+    font-size: 0.875rem;
+    display: inline-block; }
   .company-footer .company-logo {
     float: right; }
   .company-footer svg {
     width: 95px;
     height: 40px;
-    opacity: 1;
     fill: #666666;
     -webkit-transition: .4s;
     transition: .4s; }
 
 /* Modal window custom styles */
-/* modal styles and sizes */
 .modal-window {
   width: 380px;
   background: #FFF;
   padding: 15px; }
-
-.modal-content {
-  margin-top: 0; }
-  .modal-content .close {
+  .modal-window .close {
     width: 30px;
     height: 30px;
     top: 20px;
     right: 20px; }
-    .modal-content .close:before, .modal-content .close:after {
+    .modal-window .close:before, .modal-window .close:after {
       content: "";
       width: 28px;
       height: 2px;
@@ -3254,48 +3127,26 @@ body {
               transform: rotate(45deg);
       -webkit-transition: .4s;
       transition: .4s; }
-    .modal-content .close:after {
+    .modal-window .close:after {
       -webkit-transform: rotate(-45deg);
           -ms-transform: rotate(-45deg);
               transform: rotate(-45deg); }
 
 /* Modal politics */
 .modal-politics {
-  height: auto;
-  width: 75%;
-  padding: 40px; }
-  .modal-politics .modal-content {
-    margin-top: 0; }
-    .modal-politics .modal-content .modal-title {
-      font-size: 22px;
-      font-size: 1.375rem;
-      padding: 0 50px;
-      text-align: center; }
-    .modal-politics .modal-content p {
-      font-size: 14px;
-      font-size: 0.875rem;
-      text-align: left;
-      padding-bottom: 20px; }
-
-/* Sending */
-#sending {
-  border-radius: 5px;
-  border: 4px solid #000;
-  background: #FFF;
-  position: fixed;
-  top: 10px;
-  right: 10px;
-  display: none; }
-  #sending .sending {
-    padding: 15px; }
+  width: 75%; }
+  .modal-politics .modal-title {
+    text-align: center; }
+  .modal-politics p {
+    text-align: left;
+    padding-bottom: 15px; }
 
 /* ------------------------------------------ Media Queries ----------------------------------- */
 /* Big desktop min-width 1800px*/
 /* Tablets min-width: 600px and max-width: 899px */
-@media (min-width: 600px) and (max-width: 1199px) {
-  /* Tablets styles */
+@media (min-width: 600px) and (max-width: 1190px) {
   .hidden-mobile {
-    display: block !important; }
+    display: none !important; }
   .hidden-medium {
     display: none !important; }
   .vissible-mobile {
@@ -3313,11 +3164,9 @@ body {
   img {
     max-width: 100%; } }
 
-/* Tables landscape min-width: 900px and max-width: 1199px */
-/* --------------------------------------- */
+/* Tables landscape min-width: 900px and max-width: 1190px default */
 /* Mobile phone max-width: 599px */
 @media (max-width: 599px) {
-  /* Mobile styles */
   br {
     display: none; }
   /* Vissible block */
@@ -3327,6 +3176,10 @@ body {
     display: block !important; }
   .visible-medium {
     display: none !important; }
+  /* Sending */
+  #sending {
+    top: 0;
+    right: 0; }
   /* Image sizes */
   img {
     max-width: 100%; }
@@ -3338,23 +3191,9 @@ body {
             transform: none !important;
     -webkit-animation: none !important;
             animation: none !important; }
-  /* ---------------------------- Custom styles --------------------------------------*/
+  /* Custom styles */
   /* Footer */
-  /* ---------------------------- Modal window mobile ------------------------------- */
-  .modal-content .close {
-    top: 10px;
-    right: 10px; }
-  .modal-window {
-    width: 95%;
-    padding: 15px; }
-    .modal-window .modal-title {
-      padding-left: 30px;
-      padding-right: 30px;
-      text-align: center;
-      font-size: 24px;
-      font-size: 1.5rem;
-      padding-top: 20px; }
-  /* -------------------------------- Company footer -------------------------------- */
+  /* Company footer */
   .company-footer .company-wrapped {
     text-align: center; }
     .company-footer .company-wrapped .politics {
@@ -3366,399 +3205,14 @@ body {
       float: none;
       display: inline-block;
       text-align: center; }
-  .modal-politics .modal-content .modal-title {
-    padding-top: 25px; } }
+  /* Modal window mobile */
+  .modal-window {
+    width: 95%;
+    padding: 15px; }
+    .modal-window .modal-title {
+      text-align: center; }
+    .modal-window .close {
+      top: 10px;
+      right: 10px; } }
 
-html {
-  font-size: 16px; }
-
-/* Grid width */
-/* Fonts */
-/* Colors */
-/* ---------------------------------------- Grid system ------------------------------------ */
-body {
-  min-width: 1170px; }
-
-/* `Containers
-----------------------------------------------------------------------------------------------------*/
-.container_12 {
-  margin-left: auto;
-  margin-right: auto;
-  width: 1170px; }
-
-/* `Grid >> Global
-----------------------------------------------------------------------------------------------------*/
-.grid_1,
-.grid_2,
-.grid_3,
-.grid_4,
-.grid_5,
-.grid_6,
-.grid_7,
-.grid_8,
-.grid_9,
-.grid_10,
-.grid_11,
-.grid_12 {
-  display: inline;
-  float: left;
-  padding-left: 15px;
-  padding-right: 15px;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box; }
-
-.push_1, .pull_1,
-.push_2, .pull_2,
-.push_3, .pull_3,
-.push_4, .pull_4,
-.push_5, .pull_5,
-.push_6, .pull_6,
-.push_7, .pull_7,
-.push_8, .pull_8,
-.push_9, .pull_9,
-.push_10, .pull_10,
-.push_11, .pull_11 {
-  position: relative; }
-
-/* `Grid >> Children (Alpha ~ First, Omega ~ Last)
-----------------------------------------------------------------------------------------------------*/
-.alpha {
-  margin-left: 0; }
-
-.omega {
-  margin-right: 0; }
-
-/* `Grid >> 12 Columns
-----------------------------------------------------------------------------------------------------*/
-.container_12 .grid_1 {
-  width: 8.3333%; }
-
-.container_12 .grid_2 {
-  width: 16.6666%; }
-
-.container_12 .grid_3 {
-  width: 25%; }
-
-.container_12 .grid_4 {
-  width: 33.333%; }
-
-.container_12 .grid_5 {
-  width: 41.6666%; }
-
-.container_12 .grid_6 {
-  width: 50%; }
-
-.container_12 .grid_7 {
-  width: 58.3333%; }
-
-.container_12 .grid_8 {
-  width: 66.66%; }
-
-.container_12 .grid_9 {
-  width: 75%; }
-
-.container_12 .grid_10 {
-  width: 83.333%; }
-
-.container_12 .grid_11 {
-  width: 91.66667%; }
-
-.container_12 .grid_12 {
-  width: 100%; }
-
-/* `Prefix Extra Space >> 12 Columns
-----------------------------------------------------------------------------------------------------*/
-.container_12 .prefix_1 {
-  margin-left: 8.3333%; }
-
-.container_12 .prefix_2 {
-  margin-left: 16.6666%; }
-
-.container_12 .prefix_3 {
-  margin-left: 25%; }
-
-.container_12 .prefix_4 {
-  margin-left: 33.333%; }
-
-.container_12 .prefix_5 {
-  margin-left: 41.6666%; }
-
-.container_12 .prefix_6 {
-  margin-left: 50%; }
-
-.container_12 .prefix_7 {
-  margin-left: 58.3333%; }
-
-.container_12 .prefix_8 {
-  margin-left: 66.66%; }
-
-.container_12 .prefix_9 {
-  margin-left: 75%; }
-
-.container_12 .prefix_10 {
-  margin-left: 83.333%; }
-
-.container_12 .prefix_11 {
-  margin-left: 91.66667%; }
-
-/* `Clear Floated Elements
-----------------------------------------------------------------------------------------------------*/
-/* http://sonspring.com/journal/clearing-floats */
-.clear {
-  clear: both;
-  display: block;
-  overflow: hidden;
-  visibility: hidden;
-  width: 0;
-  height: 0; }
-
-/* http://www.yuiblog.com/blog/2010/09/27/clearfix-reloaded-overflowhidden-demystified */
-.clearfix:before,
-.clearfix:after,
-.container_12:before,
-.container_12:after {
-  content: '.';
-  display: block;
-  overflow: hidden;
-  visibility: hidden;
-  font-size: 0;
-  line-height: 0;
-  width: 0;
-  height: 0; }
-
-.clearfix:after,
-.container_12:after {
-  clear: both; }
-
-/*
-  The following zoom:1 rule is specifically for IE6 + IE7.
-  Move to separate stylesheet if invalid CSS is a problem.
-  */
-.clearfix,
-.container_12 {
-  zoom: 1; }
-
-@media (min-width: 600px) and (max-width: 1199px) {
-  body {
-    min-width: 85%; }
-  /* `Containers
-----------------------------------------------------------------------------------------------------*/
-  .container_12 {
-    margin-left: auto;
-    margin-right: auto;
-    width: 85%; }
-  /* `Grid >> Global
-----------------------------------------------------------------------------------------------------*/
-  .grid_1,
-  .grid_2,
-  .grid_3,
-  .grid_4,
-  .grid_5,
-  .grid_6,
-  .grid_7,
-  .grid_8,
-  .grid_9,
-  .grid_10,
-  .grid_11,
-  .grid_12 {
-    display: inline;
-    float: left;
-    padding-left: 15px;
-    padding-right: 15px;
-    -webkit-box-sizing: border-box;
-            box-sizing: border-box; }
-  .push_1, .pull_1,
-  .push_2, .pull_2,
-  .push_3, .pull_3,
-  .push_4, .pull_4,
-  .push_5, .pull_5,
-  .push_6, .pull_6,
-  .push_7, .pull_7,
-  .push_8, .pull_8,
-  .push_9, .pull_9,
-  .push_10, .pull_10,
-  .push_11, .pull_11 {
-    position: relative; }
-  /* `Grid >> Children (Alpha ~ First, Omega ~ Last)
-----------------------------------------------------------------------------------------------------*/
-  .alpha {
-    margin-left: 0; }
-  .omega {
-    margin-right: 0; }
-  /* `Grid >> 12 Columns
-----------------------------------------------------------------------------------------------------*/
-  .container_12 .grid_1 {
-    width: 8.3333%; }
-  .container_12 .grid_2 {
-    width: 16.6666%; }
-  .container_12 .grid_3 {
-    width: 25%; }
-  .container_12 .grid_4 {
-    width: 33.333%; }
-  .container_12 .grid_5 {
-    width: 41.6666%; }
-  .container_12 .grid_6 {
-    width: 50%; }
-  .container_12 .grid_7 {
-    width: 58.3333%; }
-  .container_12 .grid_8 {
-    width: 66.66%; }
-  .container_12 .grid_9 {
-    width: 75%; }
-  .container_12 .grid_10 {
-    width: 83.333%; }
-  .container_12 .grid_11 {
-    width: 91.66667%; }
-  .container_12 .grid_12 {
-    width: 100%; }
-  /* `Prefix Extra Space >> 12 Columns
-----------------------------------------------------------------------------------------------------*/
-  .container_12 .prefix_1 {
-    margin-left: 8.3333%; }
-  .container_12 .prefix_2 {
-    margin-left: 16.6666%; }
-  .container_12 .prefix_3 {
-    margin-left: 25%; }
-  .container_12 .prefix_4 {
-    margin-left: 33.333%; }
-  .container_12 .prefix_5 {
-    margin-left: 41.6666%; }
-  .container_12 .prefix_6 {
-    margin-left: 50%; }
-  .container_12 .prefix_7 {
-    margin-left: 58.3333%; }
-  .container_12 .prefix_8 {
-    margin-left: 66.66%; }
-  .container_12 .prefix_9 {
-    margin-left: 75%; }
-  .container_12 .prefix_10 {
-    margin-left: 83.333%; }
-  .container_12 .prefix_11 {
-    margin-left: 91.66667%; }
-  /* `Clear Floated Elements
-----------------------------------------------------------------------------------------------------*/
-  /* http://sonspring.com/journal/clearing-floats */
-  .clear {
-    clear: both;
-    display: block;
-    overflow: hidden;
-    visibility: hidden;
-    width: 0;
-    height: 0; }
-  /* http://www.yuiblog.com/blog/2010/09/27/clearfix-reloaded-overflowhidden-demystified */
-  .clearfix:before,
-  .clearfix:after,
-  .container_12:before,
-  .container_12:after {
-    content: '.';
-    display: block;
-    overflow: hidden;
-    visibility: hidden;
-    font-size: 0;
-    line-height: 0;
-    width: 0;
-    height: 0; }
-  .clearfix:after,
-  .container_12:after {
-    clear: both; }
-  /*
-  The following zoom:1 rule is specifically for IE6 + IE7.
-  Move to separate stylesheet if invalid CSS is a problem.
-  */
-  .clearfix,
-  .container_12 {
-    zoom: 1; } }
-
-@media (max-width: 599px) {
-  body {
-    min-width: 100%; }
-  .container_12 {
-    width: 100%; }
-  .container_12 .grid_1,
-  .container_12 .grid_2,
-  .container_12 .grid_3,
-  .container_12 .grid_4,
-  .container_12 .grid_5,
-  .container_12 .grid_6,
-  .container_12 .grid_7,
-  .container_12 .grid_8,
-  .container_12 .grid_9,
-  .container_12 .grid_10,
-  .container_12 .grid_11,
-  .container_12 .grid_12 {
-    padding-left: 10px;
-    padding-right: 10px;
-    display: block;
-    width: auto;
-    float: none; }
-  .container_12 .grid_sx_1 {
-    width: 8.3333%; }
-  .container_12 .grid_sx_2 {
-    width: 16.6666%; }
-  .container_12 .grid_sx_3 {
-    width: 25%; }
-  .container_12 .grid_sx_4 {
-    width: 33.333%; }
-  .container_12 .grid_sx_5 {
-    width: 41.6666%; }
-  .container_12 .grid_sx_6 {
-    width: 50%; }
-  .container_12 .grid_sx_7 {
-    width: 58.3333%; }
-  .container_12 .grid_sx_8 {
-    width: 66.66%; }
-  .container_12 .grid_sx_9 {
-    width: 75%; }
-  .container_12 .grid_sx_10 {
-    width: 83.333%; }
-  .container_12 .grid_sx_11 {
-    width: 91.66667%; }
-  .container_12 .grid_sx_12 {
-    width: 100%; }
-  .container_12 .prefix_1,
-  .container_12 .prefix_2,
-  .container_12 .prefix_3,
-  .container_12 .prefix_4,
-  .container_12 .prefix_5,
-  .container_12 .prefix_6,
-  .container_12 .prefix_7,
-  .container_12 .prefix_8,
-  .container_12 .prefix_9,
-  .container_12 .prefix_10,
-  .container_12 .prefix_11 {
-    margin-left: 0; }
-  /* http://sonspring.com/journal/clearing-floats */
-  .clear {
-    clear: both;
-    display: block;
-    overflow: hidden;
-    visibility: hidden;
-    width: 0;
-    height: 0; }
-  /* http://www.yuiblog.com/blog/2010/09/27/clearfix-reloaded-overflowhidden-demystified */
-  .clearfix:before,
-  .clearfix:after,
-  .container_12:before,
-  .container_12:after {
-    content: none;
-    display: block;
-    overflow: hidden;
-    visibility: hidden;
-    font-size: 0;
-    line-height: 0;
-    width: 0;
-    height: 0; }
-  .clearfix:after,
-  .container_12:after {
-    clear: both; }
-  /*
-  The following zoom:1 rule is specifically for IE6 + IE7.
-  Move to separate stylesheet if invalid CSS is a problem.
-  */
-  .clearfix,
-  .container_12 {
-    zoom: 1; } }
-
-/* Grid width */
-/* Fonts */
-/* Colors */
+/* When need thank page */

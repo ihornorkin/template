@@ -63,7 +63,7 @@ textarea:focus:-ms-input-placeholder      {opacity: 0; transition: opacity 0.3s 
 /* Hidden in desctop */
 
 .hidden-mobile {
-	display: block !important;
+	display: none !important;
 }
 
 .vissible-mobile {
@@ -104,6 +104,10 @@ input {
 
 .float-right {
 	float: right;
+}
+
+.company-wrapped {
+	width: 100%;
 }
 
 /* Sending */
