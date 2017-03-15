@@ -144,3 +144,17 @@ var clock = $('.timer').FlipClock(diff, {
     openEffect  : 'none',
     closeEffect : 'none'
   });
+
+/* Yandex metric */
+
+/* Js code */
+
+var goal = btn.closest('form').find('[name=goal]').val();
+
+/* Send form line */
+
+yaCounterXXXXXX.reachGoal(goal);
+
+/* Html */
+
+<input type="hidden" name="goal" value="goal-name" />
